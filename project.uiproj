@@ -1,0 +1,6 @@
+{
+  "Name": "ZAM_RPA",
+  "ProjectType": "Process",
+  "Description": "RPA automation for Zimnat Asset Management financial workflows",
+  "MainFile": "Main.xaml"
+}

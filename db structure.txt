@@ -1,0 +1,118 @@
+CREATE DATABASE IF NOT EXISTS ZAM_DB;
+USE ZAM_DB;
+
+CREATE TABLE GLAccounts (
+    AccountID INT AUTO_INCREMENT PRIMARY KEY,
+    Code VARCHAR(20) NOT NULL UNIQUE,
+    Name VARCHAR(100) NOT NULL,
+    Type ENUM('Asset','Liability','Revenue','Expense') NOT NULL
+);
+
+CREATE TABLE Clients (
+    ClientID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    ContactInfo VARCHAR(255),
+    Type ENUM('Pension','Corporate','HighNetWorth','UnitTrust') NOT NULL
+);
+
+CREATE TABLE Funds (
+    FundID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    FundType ENUM('ManagedFund','UnitTrust') NOT NULL,
+    OwnerClientID INT,
+    FOREIGN KEY (OwnerClientID) REFERENCES Clients(ClientID)
+);
+
+CREATE TABLE ManagementFees (
+    FeeID INT AUTO_INCREMENT PRIMARY KEY,
+    ClientID INT NOT NULL,
+    FundID INT NOT NULL,
+    Period DATE NOT NULL,
+    FeeRate DECIMAL(5,4) NOT NULL,
+    BaseValue DECIMAL(18,2) NOT NULL,
+    FeeAmount DECIMAL(18,2) NOT NULL,
+    FOREIGN KEY (ClientID) REFERENCES Clients(ClientID),
+    FOREIGN KEY (FundID) REFERENCES Funds(FundID)
+);
+
+CREATE TABLE SharedCosts (
+    CostID INT AUTO_INCREMENT PRIMARY KEY,
+    Period DATE NOT NULL,
+    CostType VARCHAR(100) NOT NULL,
+    TotalAmount DECIMAL(18,2) NOT NULL,
+    ZAMShare DECIMAL(18,2) NOT NULL,
+    GLAccountID INT,
+    FOREIGN KEY (GLAccountID) REFERENCES GLAccounts(AccountID)
+);
+
+CREATE TABLE PrepaidExpenses (
+    PrepaidID INT AUTO_INCREMENT PRIMARY KEY,
+    ExpenseType VARCHAR(100) NOT NULL,
+    Vendor VARCHAR(100),
+    TotalAmount DECIMAL(18,2) NOT NULL,
+    StartDate DATE NOT NULL,
+    TermMonths INT NOT NULL,
+    MonthlyAmort DECIMAL(18,2) NOT NULL
+);
+
+CREATE TABLE AmortizationSchedule (
+    AmortID INT AUTO_INCREMENT PRIMARY KEY,
+    PrepaidID INT NOT NULL,
+    Period DATE NOT NULL,
+    AmortAmount DECIMAL(18,2) NOT NULL,
+    FOREIGN KEY (PrepaidID) REFERENCES PrepaidExpenses(PrepaidID)
+);
+
+CREATE TABLE AuditProvisions (
+    ProvisionID INT AUTO_INCREMENT PRIMARY KEY,
+    FiscalYear YEAR NOT NULL,
+    TotalFee DECIMAL(18,2) NOT NULL,
+    MonthlyAmount DECIMAL(18,2) NOT NULL
+);
+
+CREATE TABLE CashExpenses (
+    ExpenseID INT AUTO_INCREMENT PRIMARY KEY,
+    Date DATE NOT NULL,
+    Category ENUM('PettyCash','Stationery','Fuel','Other') NOT NULL,
+    Amount DECIMAL(18,2) NOT NULL,
+    GLAccountID INT,
+    Description VARCHAR(255),
+    FOREIGN KEY (GLAccountID) REFERENCES GLAccounts(AccountID)
+);
+
+CREATE TABLE BankTransactions (
+    TxnID INT AUTO_INCREMENT PRIMARY KEY,
+    Date DATE NOT NULL,
+    Description VARCHAR(255),
+    Amount DECIMAL(18,2) NOT NULL,
+    CreditOrDebit ENUM('Credit','Debit') NOT NULL,
+    BankAccountID INT,
+    FOREIGN KEY (BankAccountID) REFERENCES GLAccounts(AccountID)
+);
+
+CREATE TABLE JournalHeader (
+    JournalID INT AUTO_INCREMENT PRIMARY KEY,
+    Date DATE NOT NULL,
+    Description VARCHAR(255),
+    SourceWorkflow VARCHAR(100)
+);
+
+CREATE TABLE JournalLine (
+    LineID INT AUTO_INCREMENT PRIMARY KEY,
+    JournalID INT NOT NULL,
+    AccountID INT NOT NULL,
+    Debit DECIMAL(18,2) DEFAULT 0,
+    Credit DECIMAL(18,2) DEFAULT 0,
+    FOREIGN KEY (JournalID) REFERENCES JournalHeader(JournalID),
+    FOREIGN KEY (AccountID) REFERENCES GLAccounts(AccountID)
+);
+
+CREATE TABLE BotRunLog (
+    LogID INT AUTO_INCREMENT PRIMARY KEY,
+    WorkflowName VARCHAR(100) NOT NULL,
+    RunDate DATETIME NOT NULL,
+    Status ENUM('Success','Failed','PartialSuccess') NOT NULL,
+    RecordsProcessed INT DEFAULT 0,
+    ErrorMessage TEXT,
+    Duration INT COMMENT 'in seconds'
+);
