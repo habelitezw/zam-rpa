@@ -1,0 +1,45 @@
+name: Deploy Production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create production database configuration file
+        env:
+          DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
+        run: |
+          if [ -n "$DB_CONNECTION_STRING" ]; then
+            echo "$DB_CONNECTION_STRING" > db_config.txt
+          else
+            echo "Warning: DB_CONNECTION_STRING secret is missing or empty. Skipping production db_config.txt creation."
+          fi
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: ./
+          server-dir: /zam-rpa/rpa/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.settings/**
+            **/.project/**
+            **/.tmh/**
+            README.md
+            db structure.txt

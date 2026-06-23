@@ -1,0 +1,1 @@
+Driver={MySQL ODBC 9.7 Unicode Driver};server=localhost;database=zam_rpa;user=root;password=codeSyre07!
