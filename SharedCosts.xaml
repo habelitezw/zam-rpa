@@ -162,7 +162,12 @@
               </InArgument>
             </Assign.Value>
           </Assign>
-          <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="452,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=localhost;database=ZAM_DB;user=root;password=dreamvilleMSQL49!">
+          <ui:DatabaseConnect  DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="452,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc">
+  <ui:DatabaseConnect.ConnectionString>
+    <InArgument x:TypeArguments="x:String">
+      <CSharpValue x:TypeArguments="x:String">System.IO.File.ReadAllText("db_config.txt").Trim()</CSharpValue>
+    </InArgument>
+  </ui:DatabaseConnect.ConnectionString>
             <ui:DatabaseConnect.DatabaseConnection>
               <OutArgument x:TypeArguments="ui:DatabaseConnection">
                 <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">dbConn8</CSharpReference>
@@ -455,7 +460,12 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=localhost;database=ZAM_DB;user=root;password=dreamvilleMSQL49!" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="524,138.66666666666666" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" ProviderName="System.Data.Odbc">
+              <ui:ExecuteNonQuery  AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}"  DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="524,138.66666666666666" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" ProviderName="System.Data.Odbc">
+  <ui:ExecuteNonQuery.ConnectionString>
+    <InArgument x:TypeArguments="x:String">
+      <CSharpValue x:TypeArguments="x:String">System.IO.File.ReadAllText("db_config.txt").Trim()</CSharpValue>
+    </InArgument>
+  </ui:ExecuteNonQuery.ConnectionString>
                 <ui:ExecuteNonQuery.Parameters>
                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                 </ui:ExecuteNonQuery.Parameters>

@@ -155,7 +155,12 @@
               </InArgument>
             </Assign.Value>
           </Assign>
-          <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="488,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=localhost;database=ZAM_DB;user=root;password=dreamvilleMSQL49!">
+          <ui:DatabaseConnect  DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="488,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc">
+  <ui:DatabaseConnect.ConnectionString>
+    <InArgument x:TypeArguments="x:String">
+      <CSharpValue x:TypeArguments="x:String">System.IO.File.ReadAllText("db_config.txt").Trim()</CSharpValue>
+    </InArgument>
+  </ui:DatabaseConnect.ConnectionString>
             <ui:DatabaseConnect.DatabaseConnection>
               <OutArgument x:TypeArguments="ui:DatabaseConnection">
                 <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">dbConn6</CSharpReference>
