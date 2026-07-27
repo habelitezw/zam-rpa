@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BHAHDarU1UupQY7HktJEsg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="291, 43, 99, 33" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Ribbon' role='tool bar' /&gt;&lt;ctrl name='Ribbon Tabs' role='page tab list' /&gt;&lt;ctrl name='Unit Trust' role='page tab' /&gt;" Guid="6277df62-0de3-451d-b98f-c13f48b8fe23" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='End Of Month Run - GS Asset Manager' /&gt;" SearchSteps="Selector" Version="V6">
+      <imageRef attrName="InformativeScreenshot" originalValue="ab8643e842509d72bf17ef5dd78258a7.jpg" xmlns="">09o9kOq2UP0mCrU6uyR_VjQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

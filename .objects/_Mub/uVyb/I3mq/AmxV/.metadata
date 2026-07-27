@@ -1,0 +1,13 @@
+﻿{
+  "Name": "CABS Custodial",
+  "Type": "Element",
+  "Id": "AmxVrW5BtEC7msi2icd_MA",
+  "Reference": "dqxWyx86LUGdfjch4DB8jQ/AmxVrW5BtEC7msi2icd_MA",
+  "ParentRef": "dqxWyx86LUGdfjch4DB8jQ/I3mqmrZCzky5or6AgMC4yg",
+  "Created": "2026-06-30T13:39:03.473765Z",
+  "Updated": "2026-06-30T13:39:03.473765Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.4.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="GXK5kJfnuEW6UNXFHcbtxw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="161, 43, 130, 33" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Ribbon' role='tool bar' /&gt;&lt;ctrl name='Ribbon Tabs' role='page tab list' /&gt;&lt;ctrl name='Money Market' role='page tab' /&gt;" Guid="ec1a115e-0203-447d-b7bb-0358736a5dff" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='GS Asset Manager' /&gt;" SearchSteps="Selector" Version="V6">
+      <imageRef attrName="InformativeScreenshot" originalValue="e6a4aa5054420964ddaca426704cf02b.jpg" xmlns="">0lI7bw-wm6U2dcm3Es5VzJg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

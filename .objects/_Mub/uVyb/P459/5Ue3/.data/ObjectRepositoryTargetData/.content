@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="u7aUvLv76U6S25tg2mrtmA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="151, 415, 124, 16" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TcxTabSheet' title='Investment Fees' /&gt;&lt;wnd cls='TcxCustomDropDownInnerEdit' idx='2' /&gt;" Guid="9b52ba4d-aaee-4ac0-ad96-7ab7aedcadb5" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='End Of Month Run - GS Asset Manager' /&gt;&lt;wnd cls='TfrmMMEndOfMonth' title='End Of Month Run' /&gt;" SearchSteps="Selector" Version="V6">
+      <imageRef attrName="InformativeScreenshot" originalValue="24cad482ff220ae101b5f69c79164709.jpg" xmlns="">0dsh9uqDBbkq1t5OXGqjUSg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Money Market",
+  "Type": "Element",
+  "Id": "R5vyK4pybECLk52m_So_NA",
+  "Reference": "dqxWyx86LUGdfjch4DB8jQ/R5vyK4pybECLk52m_So_NA",
+  "ParentRef": "dqxWyx86LUGdfjch4DB8jQ/hGgpZMUc0kG0ozIlGiX4aw",
+  "Created": "2026-07-24T01:18:04.8245744Z",
+  "Updated": "2026-07-24T01:18:04.8245744Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.4.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Show Posted",
+  "Type": "Element",
+  "TaxonomyType": "Checkbox",
+  "Id": "s5EtQSc07E2z8lwey34lGA",
+  "Reference": "dqxWyx86LUGdfjch4DB8jQ/s5EtQSc07E2z8lwey34lGA",
+  "ParentRef": "dqxWyx86LUGdfjch4DB8jQ/jNiDHZh7SEKFs1D5FN30ww",
+  "Created": "2026-06-27T12:34:58.1301823Z",
+  "Updated": "2026-06-27T12:34:58.1301823Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.4.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

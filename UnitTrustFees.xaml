@@ -89,18 +89,25 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UnitTrustFees" sap:VirtualizedContainerService.HintSize="638.6666666666666,563.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UnitTrustFees" sap:VirtualizedContainerService.HintSize="893.2,3648.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488,2955.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486.4,3625.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="486,2556.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="484.8,3205.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="debugCols" />
+            <Variable x:TypeArguments="x:Int32" Name="fundIndex" />
+            <Variable x:TypeArguments="scg:List(x:Double)" Name="vatList" />
+            <Variable x:TypeArguments="scg:List(x:Double)" Name="feesList" />
+            <Variable x:TypeArguments="x:Double" Name="taxAmount" />
+            <Variable x:TypeArguments="x:Double" Name="feeAmount" />
             <Variable x:TypeArguments="x:Int32" Name="utRecordCount" />
             <Variable x:TypeArguments="s:String[]" Name="fundSheets" />
             <Variable x:TypeArguments="x:String" Name="utFilePath" />
@@ -112,7 +119,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">
                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">utFilePath</CSharpReference>
@@ -124,7 +131,7 @@
               </InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="s:String[]">
                 <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">fundSheets</CSharpReference>
@@ -136,14 +143,14 @@
               </InArgument>
             </Assign.Value>
           </Assign>
-          <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="452,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=localhost;database=ZAM_DB;user=root;password=dreamvilleMSQL49!">
+          <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="451.2,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=habe.co.zw;database=andyb3l_zam_shanduko;user=andyb3l_tatenda;password={x5s9_O@4gMV$A;,8}">
             <ui:DatabaseConnect.DatabaseConnection>
               <OutArgument x:TypeArguments="ui:DatabaseConnection">
                 <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">dbConn4</CSharpReference>
               </OutArgument>
             </ui:DatabaseConnect.DatabaseConnection>
           </ui:DatabaseConnect>
-          <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">
                 <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">utRecordCount</CSharpReference>
@@ -155,14 +162,44 @@
               </InArgument>
             </Assign.Value>
           </Assign>
-          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each fundSheet" sap:VirtualizedContainerService.HintSize="452,1678.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="var connectionString = &quot;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=&quot; + filePath + &quot;;Extended Properties=\&quot;Excel 12.0;HDR=NO;IMEX=1\&quot;&quot;;&#xA;var adapter = new System.Data.OleDb.OleDbDataAdapter(&quot;SELECT * FROM [Summary$]&quot;, connectionString);&#xA;var dtSummary = new System.Data.DataTable();&#xA;adapter.Fill(dtSummary);&#xA;&#xA;feesList = new List&lt;double&gt;();&#xA;vatList = new List&lt;double&gt;();&#xA;&#xA;foreach (System.Data.DataRow row in dtSummary.Rows)&#xA;{&#xA;    string nameCell = row[0]?.ToString() ?? &quot;&quot;;&#xA;    if (nameCell == &quot;&quot; || nameCell.StartsWith(&quot;TOTAL&quot;) || nameCell.StartsWith(&quot;SUMMARY&quot;) || nameCell.StartsWith(&quot;ZIMNAT ASSET&quot;))&#xA;        continue;&#xA;&#xA;    double feeVal, vatVal;&#xA;    if (double.TryParse(row[1]?.ToString(), out feeVal) &amp;&amp; double.TryParse(row[2]?.ToString(), out vatVal))&#xA;    {&#xA;        feesList.Add(Math.Round(feeVal, 2, MidpointRounding.AwayFromZero));&#xA;        vatList.Add(Math.Round(vatVal, 2, MidpointRounding.AwayFromZero));&#xA;    }&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="451.2,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+            <ui:InvokeCode.Arguments>
+              <OutArgument x:TypeArguments="scg:List(x:Double)" x:Key="feesList">
+                <CSharpReference x:TypeArguments="scg:List(x:Double)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">feesList</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="scg:List(x:Double)" x:Key="vatList">
+                <CSharpReference x:TypeArguments="scg:List(x:Double)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">vatList</CSharpReference>
+              </OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="filePath">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">utFilePath</CSharpValue>
+              </InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="debugCols">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">debugCols</CSharpReference>
+              </OutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">fundIndex</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">0</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each fundSheet" sap:VirtualizedContainerService.HintSize="451.2,1964" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:String">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:String" Name="fundSheet" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1546.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,1833.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Double" Name="vatCumulative" />
+                    <Variable x:TypeArguments="x:Double" Name="mgmtCumulative" />
                     <Variable x:TypeArguments="x:Int32" Name="journalID4" />
                     <Variable x:TypeArguments="x:String" Name="fundName" />
                     <Variable x:TypeArguments="x:Double" Name="monthlyFeeTotal" />
@@ -173,32 +210,31 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="var connectionString = &quot;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=&quot; + filePath + &quot;;Extended Properties=\&quot;Excel 12.0;HDR=NO;IMEX=1\&quot;&quot;;&#xD;&#xA;var adapter = new System.Data.OleDb.OleDbDataAdapter(&quot;SELECT * FROM [&quot; + sheetName + &quot;$]&quot;, connectionString);&#xD;&#xA;dtSheet = new System.Data.DataTable();&#xD;&#xA;adapter.Fill(dtSheet);" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
-                    <ui:InvokeCode.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="filePath">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">utFilePath</CSharpValue>
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="sheetName">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">fundSheet</CSharpValue>
-                      </InArgument>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtSheet">
-                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">dtSheet</CSharpReference>
-                      </OutArgument>
-                    </ui:InvokeCode.Arguments>
-                  </ui:InvokeCode>
-                  <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Double">
-                        <CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">monthlyFeeTotal</CSharpReference>
+                        <CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">feeAmount</CSharpReference>
                       </OutArgument>
                     </Assign.To>
                     <Assign.Value>
                       <InArgument x:TypeArguments="x:Double">
-                        <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">Convert.ToDouble(dtSheet.Rows[dtSheet.Rows.Count - 1][3])</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">feesList[fundIndex]</CSharpValue>
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Double">
+                        <CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">taxAmount</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Double">
+                        <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">vatList[fundIndex]</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">
                         <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">fundName</CSharpReference>
@@ -210,7 +246,7 @@
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1">
+                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="416,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1">
                     <ui:ExecuteNonQuery.ExistingDbConnection>
                       <InArgument x:TypeArguments="ui:DatabaseConnection">
                         <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">dbConn4</CSharpValue>
@@ -221,11 +257,11 @@
                     </ui:ExecuteNonQuery.Parameters>
                     <ui:ExecuteNonQuery.Sql>
                       <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">"INSERT INTO JournalHeader (Date, Description, SourceWorkflow) VALUES ('" + DateTime.Now.ToString("yyyy-MM-dd") + "', 'Unit Trust Fees - " + fundName + " - " + DateTime.Now.ToString("MMMM yyyy") + "', 'UnitTrustFees')"</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">"INSERT INTO journalheader (Date, Description, SourceWorkflow) VALUES ('" + DateTime.Now.ToString("yyyy-MM-dd") + "', 'Unit Trust Fees - " + fundName + " - " + DateTime.Now.ToString("MMMM yyyy") + "', 'UnitTrustFees')"</CSharpValue>
                       </InArgument>
                     </ui:ExecuteNonQuery.Sql>
                   </ui:ExecuteNonQuery>
-                  <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Query" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT LAST_INSERT_ID() AS JournalID">
+                  <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Query" sap:VirtualizedContainerService.HintSize="416,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT LAST_INSERT_ID() AS JournalID">
                     <ui:ExecuteQuery.DataTable>
                       <OutArgument x:TypeArguments="sd:DataTable">
                         <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">dtJournalID4</CSharpReference>
@@ -240,7 +276,7 @@
                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                     </ui:ExecuteQuery.Parameters>
                   </ui:ExecuteQuery>
-                  <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">
                         <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">journalID4</CSharpReference>
@@ -252,7 +288,7 @@
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2">
+                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="416,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2">
                     <ui:ExecuteNonQuery.ExistingDbConnection>
                       <InArgument x:TypeArguments="ui:DatabaseConnection">
                         <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">dbConn4</CSharpValue>
@@ -263,11 +299,11 @@
                     </ui:ExecuteNonQuery.Parameters>
                     <ui:ExecuteNonQuery.Sql>
                       <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">"INSERT INTO JournalLine (JournalID, AccountID, Debit, Credit) VALUES (" + journalID4.ToString() + ", (SELECT AccountID FROM GLAccounts WHERE Code = '1004'), " + monthlyFeeTotal.ToString() + ", 0)"</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">"INSERT INTO journalline (JournalID, AccountID, Debit, Credit, Reference) VALUES (" + journalID4.ToString() + ", (SELECT AccountID FROM glaccounts WHERE Code = '1004'), " + Math.Round(feeAmount + taxAmount, 2, MidpointRounding.AwayFromZero).ToString() + ", 0, '" + fundName.Replace("'", "''") + "')"</CSharpValue>
                       </InArgument>
                     </ui:ExecuteNonQuery.Sql>
                   </ui:ExecuteNonQuery>
-                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_3">
+                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="416,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_3">
                     <ui:ExecuteNonQuery.ExistingDbConnection>
                       <InArgument x:TypeArguments="ui:DatabaseConnection">
                         <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">dbConn4</CSharpValue>
@@ -278,11 +314,26 @@
                     </ui:ExecuteNonQuery.Parameters>
                     <ui:ExecuteNonQuery.Sql>
                       <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">"INSERT INTO JournalLine (JournalID, AccountID, Debit, Credit) VALUES (" + journalID4.ToString() + ", (SELECT AccountID FROM GLAccounts WHERE Code = '4002'), 0, " + monthlyFeeTotal.ToString() + ")"</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">"INSERT INTO journalline (JournalID, AccountID, Debit, Credit, Reference) VALUES (" + journalID4.ToString() + ", (SELECT AccountID FROM glaccounts WHERE Code = '4002'), 0, " + feeAmount.ToString() + ", '" + fundName.Replace("'", "''") + "')"</CSharpValue>
                       </InArgument>
                     </ui:ExecuteNonQuery.Sql>
                   </ui:ExecuteNonQuery>
-                  <Assign sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="416,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_6">
+                    <ui:ExecuteNonQuery.ExistingDbConnection>
+                      <InArgument x:TypeArguments="ui:DatabaseConnection">
+                        <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">dbConn4</CSharpValue>
+                      </InArgument>
+                    </ui:ExecuteNonQuery.ExistingDbConnection>
+                    <ui:ExecuteNonQuery.Parameters>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:ExecuteNonQuery.Parameters>
+                    <ui:ExecuteNonQuery.Sql>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">"INSERT INTO journalline (JournalID, AccountID, Debit, Credit, Reference) VALUES (" + journalID4.ToString() + ", (SELECT AccountID FROM glaccounts WHERE Code = '5120'), 0, " + taxAmount.ToString() + ", '" + fundName.Replace("'", "''") + "')"</CSharpValue>
+                      </InArgument>
+                    </ui:ExecuteNonQuery.Sql>
+                  </ui:ExecuteNonQuery>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">
                         <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">utRecordCount</CSharpReference>
@@ -291,6 +342,18 @@
                     <Assign.Value>
                       <InArgument x:TypeArguments="x:Int32">
                         <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">utRecordCount + 1</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">
+                        <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">fundIndex</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">fundIndex + 1</CSharpValue>
                       </InArgument>
                     </Assign.Value>
                   </Assign>
@@ -303,7 +366,7 @@
               </InArgument>
             </ui:ForEach.Values>
           </ui:ForEach>
-          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="452,148" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_4">
+          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="451.2,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_4">
             <ui:ExecuteNonQuery.ExistingDbConnection>
               <InArgument x:TypeArguments="ui:DatabaseConnection">
                 <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">dbConn4</CSharpValue>
@@ -314,11 +377,11 @@
             </ui:ExecuteNonQuery.Parameters>
             <ui:ExecuteNonQuery.Sql>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">"INSERT INTO BotRunLog (WorkflowName, RunDate, Status, RecordsProcessed, ErrorMessage, Duration) VALUES ('UnitTrustFees', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'Success', " + utRecordCount.ToString() + ", NULL, 0)"</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">"INSERT INTO botrunlog (WorkflowName, RunDate, Status, RecordsProcessed, ErrorMessage, Duration) VALUES ('UnitTrustFees', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'Success', " + utRecordCount.ToString() + ", NULL, 0)"</CSharpValue>
               </InArgument>
             </ui:ExecuteNonQuery.Sql>
           </ui:ExecuteNonQuery>
-          <ui:DatabaseDisconnect DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="452,48" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1">
+          <ui:DatabaseDisconnect DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="451.2,48" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1">
             <ui:DatabaseDisconnect.DatabaseConnection>
               <InArgument x:TypeArguments="ui:DatabaseConnection">
                 <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">dbConn4</CSharpValue>
@@ -333,19 +396,19 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Catch {ExceptionType}" sap:VirtualizedContainerService.HintSize="486,198.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Catch {ExceptionType}" sap:VirtualizedContainerService.HintSize="484.8,198.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=localhost;database=ZAM_DB;user=root;password=dreamvilleMSQL49!" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="452,138.66666666666666" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" ProviderName="System.Data.Odbc">
+              <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=habe.co.zw;database=andyb3l_zam_shanduko;user=andyb3l_tatenda;password={x5s9_O@4gMV$A;,8}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="451.2,138.4" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" ProviderName="System.Data.Odbc">
                 <ui:ExecuteNonQuery.Parameters>
                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                 </ui:ExecuteNonQuery.Parameters>
                 <ui:ExecuteNonQuery.Sql>
                   <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">"INSERT INTO BotRunLog (WorkflowName, RunDate, Status, RecordsProcessed, ErrorMessage, Duration) VALUES ('UnitTrustFees', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'Failed', 0, '" + exception.Message + "', 0)"</CSharpValue>
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">"INSERT INTO botrunlog (WorkflowName, RunDate, Status, RecordsProcessed, ErrorMessage, Duration) VALUES ('UnitTrustFees', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'Failed', 0, '" + exception.Message + "', 0)"</CSharpValue>
                   </InArgument>
                 </ui:ExecuteNonQuery.Sql>
               </ui:ExecuteNonQuery>
@@ -354,7 +417,7 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="486,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484.8,89.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

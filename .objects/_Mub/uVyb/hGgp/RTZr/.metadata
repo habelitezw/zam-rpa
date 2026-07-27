@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Tools",
+  "Type": "Element",
+  "Id": "RTZrTw46gECx_UIKWE1q0A",
+  "Reference": "dqxWyx86LUGdfjch4DB8jQ/RTZrTw46gECx_UIKWE1q0A",
+  "ParentRef": "dqxWyx86LUGdfjch4DB8jQ/hGgpZMUc0kG0ozIlGiX4aw",
+  "Created": "2026-07-24T01:19:14.1561499Z",
+  "Updated": "2026-07-24T01:19:14.1561499Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.4.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

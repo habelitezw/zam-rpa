@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aP4VwEbb5ESuB_53lVShZA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="145, 470, 105, 24" ElementType="CheckBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TcxTabSheet' title='Investment Fees' /&gt;&lt;wnd cls='TcxCheckBox' title='Show Posted' /&gt;" Guid="e90d45a8-51ba-46af-b0b7-f15c00bc27ad" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='End Of Month Run - GS Asset Manager' /&gt;&lt;wnd cls='TfrmMMEndOfMonth' title='End Of Month Run' /&gt;" SearchSteps="Selector" Version="V6">
+      <imageRef attrName="InformativeScreenshot" originalValue="2a67de176ddf9ba17fa64fdff252c615.jpg" xmlns="">0jwd7LnaqCUO7AhNg1ETGtA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Check</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

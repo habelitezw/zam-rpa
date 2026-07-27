@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Custodial Group",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "cSML9tOvIUSF1SGFudSl0w",
+  "Reference": "dqxWyx86LUGdfjch4DB8jQ/cSML9tOvIUSF1SGFudSl0w",
+  "ParentRef": "dqxWyx86LUGdfjch4DB8jQ/et1LtxYRs0KfhJHo8SCbng",
+  "Created": "2026-06-30T20:43:26.1112145Z",
+  "Updated": "2026-06-30T20:43:26.1112145Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.4.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

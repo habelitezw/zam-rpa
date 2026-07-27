@@ -1,0 +1,460 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ACCPACJournalEntry" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Shared.Telemetry</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ACCPACJournalEntry" sap:VirtualizedContainerService.HintSize="893.2,3591.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:DateTime" Name="botStartTime" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486.4,3568" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConnACCPAC" />
+      </TryCatch.Variables>
+      <TryCatch.Try>
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="484.8,3129.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="namedRangeError" />
+            <Variable x:TypeArguments="x:Int32" Name="batchCount" />
+            <Variable x:TypeArguments="sd:DataTable" Name="dtHeaders" />
+            <Variable x:TypeArguments="x:String" Name="importFilePath" />
+            <Variable x:TypeArguments="sd:DataTable" Name="dtImportHeaders" />
+            <Variable x:TypeArguments="sd:DataTable" Name="dtImportDetails" />
+            <Variable x:TypeArguments="x:Int32" Default="0" Name="entryNumber" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:DateTime">
+                <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">botStartTime</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:DateTime">
+                <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">DateTime.Now</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="451.2,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=habe.co.zw;database=andyb3l_zam_shanduko;user=andyb3l_tatenda;password={x5s9_O@4gMV$A;,8}">
+            <ui:DatabaseConnect.DatabaseConnection>
+              <OutArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">dbConnACCPAC</CSharpReference>
+              </OutArgument>
+            </ui:DatabaseConnect.DatabaseConnection>
+          </ui:DatabaseConnect>
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Query" sap:VirtualizedContainerService.HintSize="451.2,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT j.JournalID, j.Date, j.Description, j.SourceWorkflow, j.ACCPACBatchNumber FROM journalheader j WHERE j.PostedToACCPAC = FALSE ORDER BY j.JournalID">
+            <ui:ExecuteQuery.DataTable>
+              <OutArgument x:TypeArguments="sd:DataTable">
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dtHeaders</CSharpReference>
+              </OutArgument>
+            </ui:ExecuteQuery.DataTable>
+            <ui:ExecuteQuery.ExistingDbConnection>
+              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">dbConnACCPAC</CSharpValue>
+              </InArgument>
+            </ui:ExecuteQuery.ExistingDbConnection>
+            <ui:ExecuteQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteQuery.Parameters>
+          </ui:ExecuteQuery>
+          <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">batchCount</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">0</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="// Create Journal_Headers sheet data&#xA;headersTable = new System.Data.DataTable();&#xA;headersTable.Columns.Add(&quot;BATCHID&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;BTCHENTRY&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;ORIGCOMP&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;SRCELEDGER&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;SRCETYPE&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;FSCSYR&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;FSCSPERD&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;SWEDIT&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;SWREVERSE&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;JRNLDESC&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;JRNLDR&quot;, typeof(double));&#xA;headersTable.Columns.Add(&quot;JRNLCR&quot;, typeof(double));&#xA;headersTable.Columns.Add(&quot;JRNLQTY&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;DATEENTRY&quot;, typeof(DateTime));&#xA;headersTable.Columns.Add(&quot;DRILSRCTY&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;DRILLDWNLK&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;DRILAPP&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;BALANCE&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;REVYR&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;REVPERD&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;ERRBATCH&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;ERRENTRY&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;DETAILCNT&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;PROCESSCMD&quot;, typeof(int));&#xA;headersTable.Columns.Add(&quot;ENTEREDBY&quot;, typeof(string));&#xA;headersTable.Columns.Add(&quot;DOCDATE&quot;, typeof(DateTime));&#xA;&#xA;// Create Journal_Details sheet data&#xA;detailsTable = new System.Data.DataTable();&#xA;detailsTable.Columns.Add(&quot;BATCHNBR&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;JOURNALID&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;TRANSNBR&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;DESCOMP&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;ROUTE&quot;, typeof(int));&#xA;detailsTable.Columns.Add(&quot;ACCTID&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;COMPANYID&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;TRANSAMT&quot;, typeof(double));&#xA;detailsTable.Columns.Add(&quot;TRANSQTY&quot;, typeof(int));&#xA;detailsTable.Columns.Add(&quot;SCURNDEC&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;SCURNAMT&quot;, typeof(double));&#xA;detailsTable.Columns.Add(&quot;HCURNCODE&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;RATETYPE&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;SCURNCODE&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;RATEDATE&quot;, typeof(DateTime));&#xA;detailsTable.Columns.Add(&quot;CONVRATE&quot;, typeof(double));&#xA;detailsTable.Columns.Add(&quot;RATESPREAD&quot;, typeof(int));&#xA;detailsTable.Columns.Add(&quot;DATEMTCHCD&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;RATEOPER&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;TRANSDESC&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;TRANSREF&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;TRANSDATE&quot;, typeof(DateTime));&#xA;detailsTable.Columns.Add(&quot;SRCELDGR&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;SRCETYPE&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;COMMENT&quot;, typeof(string));&#xA;detailsTable.Columns.Add(&quot;VALUES&quot;, typeof(int));&#xA;detailsTable.Columns.Add(&quot;PROCESSCMD&quot;, typeof(int));" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="451.2,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+            <ui:InvokeCode.Arguments>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="headersTable">
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">dtImportHeaders</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="detailsTable">
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">dtImportDetails</CSharpReference>
+              </OutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="451.2,1623.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="headerRow" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,1441.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="currentBatchId" />
+                    <Variable x:TypeArguments="x:String" Name="batchDescription" />
+                    <Variable x:TypeArguments="x:String" Name="journalDate" />
+                    <Variable x:TypeArguments="x:String" Name="journalDescription" />
+                    <Variable x:TypeArguments="x:Int32" Name="currentJournalID" />
+                    <Variable x:TypeArguments="sd:DataTable" Name="dtLines" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">
+                        <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">currentJournalID</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Convert.ToInt32(headerRow["JournalID"])</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">journalDescription</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">headerRow["Description"].ToString().Trim()</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">journalDate</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">Convert.ToDateTime(headerRow["Date"]).ToString("dd/MM/yyyy")</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">currentBatchId</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">headerRow["ACCPACBatchNumber"].ToString().Trim()</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Query" sap:VirtualizedContainerService.HintSize="416,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2">
+                    <ui:ExecuteQuery.DataTable>
+                      <OutArgument x:TypeArguments="sd:DataTable">
+                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">dtLines</CSharpReference>
+                      </OutArgument>
+                    </ui:ExecuteQuery.DataTable>
+                    <ui:ExecuteQuery.ExistingDbConnection>
+                      <InArgument x:TypeArguments="ui:DatabaseConnection">
+                        <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">dbConnACCPAC</CSharpValue>
+                      </InArgument>
+                    </ui:ExecuteQuery.ExistingDbConnection>
+                    <ui:ExecuteQuery.Parameters>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:ExecuteQuery.Parameters>
+                    <ui:ExecuteQuery.Sql>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">"SELECT l.LineID, l.Debit, l.Credit, a.ACCPACCode FROM journalline l JOIN GLAccounts a ON l.AccountID = a.AccountID WHERE l.JournalID = " + currentJournalID.ToString() + " AND (l.Debit &lt;&gt; 0 OR l.Credit &lt;&gt; 0)"</CSharpValue>
+                      </InArgument>
+                    </ui:ExecuteQuery.Sql>
+                  </ui:ExecuteQuery>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">batchDescription</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"ZAM RPA - " + DateTime.Now.ToString("MMMM yyyy")</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="if(linesTable.Rows.Count &gt; 0)&#xA;{&#xA;&#x9;entryNumber++;&#xA;    int lineNum = 20;&#xA;&#x9;foreach(System.Data.DataRow line in linesTable.Rows)&#xA;    {&#xA;        double debit = Convert.ToDouble(line[&quot;Debit&quot;]);&#xA;        double credit = Convert.ToDouble(line[&quot;Credit&quot;]);&#xA;        double amount = debit &gt; 0 ? debit : -credit;&#xA;        string acctCode = line[&quot;ACCPACCode&quot;].ToString().Replace(&quot;-&quot;,&quot;&quot;);&#xA;        DateTime journalDateTime = DateTime.ParseExact(journalDate, &quot;d/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture);&#xA;&#xA;        var detailRow = detailsTable.NewRow();&#xA;        detailRow[&quot;BATCHNBR&quot;] = currentBatchId;&#xA;        detailRow[&quot;JOURNALID&quot;] = entryNumber.ToString(&quot;D5&quot;);&#xA;        detailRow[&quot;TRANSNBR&quot;] = lineNum.ToString(&quot;D10&quot;);&#xA;        detailRow[&quot;DESCOMP&quot;] = DBNull.Value;&#xA;        detailRow[&quot;ROUTE&quot;] = 0;&#xA;        detailRow[&quot;ACCTID&quot;] = acctCode;&#xA;        detailRow[&quot;COMPANYID&quot;] = DBNull.Value;&#xA;        detailRow[&quot;TRANSAMT&quot;] = amount;&#xA;        detailRow[&quot;TRANSQTY&quot;] = 0;&#xA;        detailRow[&quot;SCURNDEC&quot;] = &quot;2&quot;;&#xA;        detailRow[&quot;SCURNAMT&quot;] = amount;&#xA;        detailRow[&quot;HCURNCODE&quot;] = &quot;USD&quot;;&#xA;        detailRow[&quot;RATETYPE&quot;] = &quot;SP&quot;;&#xA;        detailRow[&quot;SCURNCODE&quot;] = &quot;USD&quot;;&#xA;        detailRow[&quot;RATEDATE&quot;] = DateTime.Today;&#xA;        detailRow[&quot;CONVRATE&quot;] = 1;       // int not float&#xA;        detailRow[&quot;RATESPREAD&quot;] = 0;&#xA;        detailRow[&quot;DATEMTCHCD&quot;] = &quot;3&quot;;&#xA;        detailRow[&quot;RATEOPER&quot;] = &quot;2&quot;;&#xA;        detailRow[&quot;TRANSDESC&quot;] = journalDescription;&#xA;        detailRow[&quot;TRANSREF&quot;] = DBNull.Value;&#xA;        detailRow[&quot;TRANSDATE&quot;] = DateTime.Today;&#xA;        detailRow[&quot;SRCELDGR&quot;] = &quot;GL&quot;;&#xA;        detailRow[&quot;SRCETYPE&quot;] = &quot;JE&quot;;&#xA;        detailRow[&quot;COMMENT&quot;] = DBNull.Value;&#xA;        detailRow[&quot;VALUES&quot;] = 0;&#xA;        detailRow[&quot;PROCESSCMD&quot;] = 0;&#xA;        detailsTable.Rows.Add(detailRow);&#xA;        lineNum += 20;&#xA;    }&#xA;&#xA;    DateTime docDateTime = DateTime.ParseExact(journalDate, &quot;d/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture);&#xA;    var headerRow = headersTable.NewRow();&#xA;    headerRow[&quot;BATCHID&quot;] = currentBatchId;&#xA;    headerRow[&quot;BTCHENTRY&quot;] = entryNumber.ToString(&quot;D5&quot;);&#xA;    headerRow[&quot;ORIGCOMP&quot;] = DBNull.Value;&#xA;    headerRow[&quot;SRCELEDGER&quot;] = &quot;GL&quot;;&#xA;    headerRow[&quot;SRCETYPE&quot;] = &quot;JE&quot;;&#xA;    headerRow[&quot;FSCSYR&quot;] = DateTime.Today.Year.ToString();&#xA;    headerRow[&quot;FSCSPERD&quot;] = DateTime.Today.Month.ToString(&quot;D2&quot;);&#xA;    headerRow[&quot;SWEDIT&quot;] = 0;&#xA;    headerRow[&quot;SWREVERSE&quot;] = 0;&#xA;    headerRow[&quot;JRNLDESC&quot;] = journalDescription;&#xA;    double totalDr = 0;&#xA;&#x9;double totalCr = 0;&#xA;&#x9;foreach(System.Data.DataRow line in linesTable.Rows)&#xA;&#x9;{&#xA;    &#x9;totalDr += Convert.ToDouble(line[&quot;Debit&quot;]);&#xA;    &#x9;totalCr += Convert.ToDouble(line[&quot;Credit&quot;]);&#xA;&#x9;}&#xA;&#x9;headerRow[&quot;JRNLDR&quot;] = (double)totalDr;&#xA;&#x9;headerRow[&quot;JRNLCR&quot;] = (double)totalCr;&#xA;    headerRow[&quot;JRNLQTY&quot;] = 0;&#xA;    headerRow[&quot;DATEENTRY&quot;] = DateTime.Today;&#xA;    headerRow[&quot;DRILSRCTY&quot;] = 0;&#xA;    headerRow[&quot;DRILLDWNLK&quot;] = 0;&#xA;    headerRow[&quot;DRILAPP&quot;] = DBNull.Value;&#xA;    headerRow[&quot;BALANCE&quot;] = 0;&#xA;    headerRow[&quot;REVYR&quot;] = &quot;0000&quot;;&#xA;    headerRow[&quot;REVPERD&quot;] = &quot;00&quot;;&#xA;    headerRow[&quot;ERRBATCH&quot;] = 0;&#xA;    headerRow[&quot;ERRENTRY&quot;] = 0;&#xA;    headerRow[&quot;DETAILCNT&quot;] = linesTable.Rows.Count;&#xA;    headerRow[&quot;PROCESSCMD&quot;] = 2;&#xA;    headerRow[&quot;ENTEREDBY&quot;] = &quot;TAKUNDA&quot;;&#xA;    headerRow[&quot;DOCDATE&quot;] = DateTime.Today;&#xA;    headersTable.Rows.Add(headerRow);&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+                    <ui:InvokeCode.Arguments>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="headersTable">
+                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">dtImportHeaders</CSharpReference>
+                      </InOutArgument>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="detailsTable">
+                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">dtImportDetails</CSharpReference>
+                      </InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="journalDescription">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">journalDescription</CSharpValue>
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="journalDate ">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">journalDate</CSharpValue>
+                      </InArgument>
+                      <InArgument x:TypeArguments="sd:DataTable" x:Key="linesTable">
+                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">dtLines</CSharpValue>
+                      </InArgument>
+                      <InOutArgument x:TypeArguments="x:Int32" x:Key="entryNumber">
+                        <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">entryNumber</CSharpReference>
+                      </InOutArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="lineCount">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">dtLines.Rows.Count</CSharpValue>
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="currentBatchId">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">currentBatchId</CSharpValue>
+                      </InArgument>
+                    </ui:InvokeCode.Arguments>
+                  </ui:InvokeCode>
+                  <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">
+                        <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">batchCount</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">batchCount + 1</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+            <ui:ForEachRow.DataTable>
+              <InArgument x:TypeArguments="sd:DataTable">
+                <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">dtHeaders</CSharpValue>
+              </InArgument>
+            </ui:ForEachRow.DataTable>
+          </ui:ForEachRow>
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="string templatePath = @&quot;C:\ZAM_RPA\GL_Export_Test.xlsx&quot;;&#xA;string filePath = @&quot;C:\ZAM_RPA\ACCPAC_Import.xlsx&quot;;&#xA;&#xA;System.IO.Directory.CreateDirectory(@&quot;C:\ZAM_RPA&quot;);&#xA;&#xA;var app = new Microsoft.Office.Interop.Excel.Application();&#xA;app.Visible = false;&#xA;app.DisplayAlerts = false;&#xA;&#xA;// Open the Sage exported workbook as the template&#xA;var workbook = app.Workbooks.Open(templatePath);&#xA;&#xA;// Get the existing worksheets&#xA;var headersSheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets[&quot;Journal_Headers&quot;];&#xA;var detailsSheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets[&quot;Journal_Details&quot;];&#xA;&#xA;// ------------------------------------------------------&#xA;// Clear existing data rows ONLY (keep row 1 headers)&#xA;// ------------------------------------------------------&#xA;&#xA;int lastHeaderRow = headersSheet.Cells.SpecialCells(&#xA;    Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeLastCell).Row;&#xA;&#xA;if(lastHeaderRow &gt;= 2)&#xA;{&#xA;    Microsoft.Office.Interop.Excel.Range rng =&#xA;        headersSheet.Range[&quot;A2&quot;, &quot;Z&quot; + lastHeaderRow.ToString()];&#xA;    rng.ClearContents();&#xA;}&#xA;&#xA;int lastDetailRow = detailsSheet.Cells.SpecialCells(&#xA;    Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeLastCell).Row;&#xA;&#xA;if(lastDetailRow &gt;= 2)&#xA;{&#xA;    Microsoft.Office.Interop.Excel.Range rng =&#xA;        detailsSheet.Range[&quot;A2&quot;, &quot;AA&quot; + lastDetailRow.ToString()];&#xA;    rng.ClearContents();&#xA;}&#xA;&#xA;// ------------------------------------------------------&#xA;// Write Journal_Headers&#xA;// ------------------------------------------------------&#xA;&#xA;for(int row = 0; row &lt; headersTable.Rows.Count; row++)&#xA;{&#xA;    for(int col = 0; col &lt; headersTable.Columns.Count; col++)&#xA;    {&#xA;        var hCell = (Microsoft.Office.Interop.Excel.Range)headersSheet.Cells[row + 2, col + 1];&#xA;        object val = headersTable.Rows[row][col];&#xA;&#xA;        if(val is string)&#xA;        {&#xA;            hCell.NumberFormat = &quot;@&quot;;&#xA;            hCell.Value2 = val.ToString();&#xA;        }&#xA;        else if(val is DateTime)&#xA;        {&#xA;            hCell.NumberFormat = &quot;yyyy-mm-dd&quot;;&#xA;            hCell.Value2 = ((DateTime)val).ToOADate();&#xA;        }&#xA;        else if(val is double || val is float)&#xA;        {&#xA;            hCell.Value2 = Convert.ToDouble(val);&#xA;        }&#xA;        else if(val is int || val is long)&#xA;        {&#xA;            hCell.Value2 = Convert.ToInt32(val);&#xA;        }&#xA;        else if(val == DBNull.Value)&#xA;        {&#xA;            hCell.Value2 = &quot;&quot;;&#xA;        }&#xA;        else&#xA;        {&#xA;            hCell.Value2 = val;&#xA;        }&#xA;    }&#xA;}&#xA;&#xA;// ------------------------------------------------------&#xA;// Write Journal_Details&#xA;// ------------------------------------------------------&#xA;&#xA;for(int row = 0; row &lt; detailsTable.Rows.Count; row++)&#xA;{&#xA;    for(int col = 0; col &lt; detailsTable.Columns.Count; col++)&#xA;    {&#xA;        var dCell = (Microsoft.Office.Interop.Excel.Range)detailsSheet.Cells[row + 2, col + 1];&#xA;        object val = detailsTable.Rows[row][col];&#xA;&#xA;        if(val is string)&#xA;        {&#xA;            dCell.NumberFormat = &quot;@&quot;;&#xA;            dCell.Value2 = val.ToString();&#xA;        }&#xA;        else if(val is DateTime)&#xA;        {&#xA;            dCell.NumberFormat = &quot;yyyy-mm-dd&quot;;&#xA;            dCell.Value2 = ((DateTime)val).ToOADate();&#xA;        }&#xA;        else if(val is double || val is float)&#xA;        {&#xA;            dCell.Value2 = Convert.ToDouble(val);&#xA;        }&#xA;        else if(val is int || val is long)&#xA;        {&#xA;            dCell.Value2 = Convert.ToInt32(val);&#xA;        }&#xA;        else if(val == DBNull.Value)&#xA;        {&#xA;            dCell.Value2 = &quot;&quot;;&#xA;        }&#xA;        else&#xA;        {&#xA;            dCell.Value2 = val;&#xA;        }&#xA;    }&#xA;}&#xA;&#xA;// Update the named ranges&#xA;try&#xA;{&#xA;    workbook.Names.Item(&quot;Journal_Headers&quot;).Delete();&#xA;}&#xA;catch {}&#xA;&#xA;try&#xA;{&#xA;    workbook.Names.Item(&quot;Journal_Details&quot;).Delete();&#xA;}&#xA;catch {}&#xA;&#xA;workbook.Names.Add(&#xA;    &quot;Journal_Headers&quot;,&#xA;    &quot;=Journal_Headers!$A$1:$Z$&quot; + (headersTable.Rows.Count + 1).ToString()&#xA;);&#xA;&#xA;workbook.Names.Add(&#xA;    &quot;Journal_Details&quot;,&#xA;    &quot;=Journal_Details!$A$1:$AA$&quot; + (detailsTable.Rows.Count + 1).ToString()&#xA;);&#xA;&#xA;// Save as a new workbook&#xA;app.DisplayAlerts = false;&#xA;&#xA;workbook.SaveAs(&#xA;    filePath,&#xA;    Microsoft.Office.Interop.Excel.XlFileFormat.xlOpenXMLWorkbook&#xA;);&#xA;&#xA;workbook.Close(false);&#xA;app.Quit();&#xA;&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(headersSheet);&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(detailsSheet);&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(app);&#xA;&#xA;outputPath = filePath;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="451.2,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4" Language="CSharp">
+            <ui:InvokeCode.Arguments>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="headersTable">
+                <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">dtImportHeaders</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="detailsTable">
+                <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">dtImportDetails</CSharpValue>
+              </InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="outputPath">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">importFilePath</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="errorMessage">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">namedRangeError</CSharpReference>
+              </OutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="451.2,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_4">
+            <ui:ExecuteNonQuery.ExistingDbConnection>
+              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">dbConnACCPAC</CSharpValue>
+              </InArgument>
+            </ui:ExecuteNonQuery.ExistingDbConnection>
+            <ui:ExecuteNonQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteNonQuery.Parameters>
+            <ui:ExecuteNonQuery.Sql>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">"UPDATE journalheader SET postedtoaccpac = TRUE, PostedDate = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "' WHERE postedtoaccpac = FALSE"</CSharpValue>
+              </InArgument>
+            </ui:ExecuteNonQuery.Sql>
+          </ui:ExecuteNonQuery>
+          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="451.2,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5">
+            <ui:ExecuteNonQuery.ExistingDbConnection>
+              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">dbConnACCPAC</CSharpValue>
+              </InArgument>
+            </ui:ExecuteNonQuery.ExistingDbConnection>
+            <ui:ExecuteNonQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteNonQuery.Parameters>
+            <ui:ExecuteNonQuery.Sql>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">"INSERT INTO botrunlog (WorkflowName, RunDate, Status, RecordsProcessed, ErrorMessage, Duration) VALUES ('ACCPACJournalEntry', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'Success', " + batchCount.ToString() + ", NULL, " + Convert.ToInt32((DateTime.Now - botStartTime).TotalSeconds).ToString() + ")"</CSharpValue>
+              </InArgument>
+            </ui:ExecuteNonQuery.Sql>
+          </ui:ExecuteNonQuery>
+          <ui:DatabaseDisconnect DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_2">
+            <ui:DatabaseDisconnect.DatabaseConnection>
+              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">dbConnACCPAC</CSharpValue>
+              </InArgument>
+            </ui:DatabaseDisconnect.DatabaseConnection>
+          </ui:DatabaseDisconnect>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="451.2,113.6" sap2010:WorkflowViewState.IdRef="MessageBox_2">
+            <ui:MessageBox.Text>
+              <InArgument x:TypeArguments="x:Object">
+                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">"Import file generated at: " + importFilePath</CSharpValue>
+              </InArgument>
+            </ui:MessageBox.Text>
+          </ui:MessageBox>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Catch" sap:VirtualizedContainerService.HintSize="484.8,198.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="451.2,138.4" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_3">
+                <ui:ExecuteNonQuery.ExistingDbConnection>
+                  <InArgument x:TypeArguments="ui:DatabaseConnection">
+                    <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">dbConnACCPAC</CSharpValue>
+                  </InArgument>
+                </ui:ExecuteNonQuery.ExistingDbConnection>
+                <ui:ExecuteNonQuery.Parameters>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:ExecuteNonQuery.Parameters>
+                <ui:ExecuteNonQuery.Sql>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">"INSERT INTO botrunlog (WorkflowName, RunDate, Status, RecordsProcessed, ErrorMessage, Duration) VALUES ('ACCPACJournalEntry', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'Failed', 0, '" + exception.Message + "', " + Convert.ToInt32((DateTime.Now - botStartTime).TotalSeconds).ToString() + ")"</CSharpValue>
+                  </InArgument>
+                </ui:ExecuteNonQuery.Sql>
+              </ui:ExecuteNonQuery>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484.8,108" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:DatabaseDisconnect DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="451.2,48" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_3">
+            <ui:DatabaseDisconnect.DatabaseConnection>
+              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">dbConnACCPAC</CSharpValue>
+              </InArgument>
+            </ui:DatabaseDisconnect.DatabaseConnection>
+          </ui:DatabaseDisconnect>
+        </Sequence>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>

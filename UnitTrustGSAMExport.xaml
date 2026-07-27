@@ -1,0 +1,1336 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GSAMUnitTrustExport" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Shared.Telemetry</x:String>
+      <x:String>Microsoft.Office.Interop.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Excel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GSAMUnitTrustExport" sap:VirtualizedContainerService.HintSize="556.8,10716.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556.8,10832" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="s:DateTime" Name="botStartTime" />
+        <Variable x:TypeArguments="x:Int32" Default="0" Name="exportCount" />
+      </TryCatch.Variables>
+      <TryCatch.Try>
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="555.2,10435.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="consolidatedFileName" />
+            <Variable x:TypeArguments="x:String" Name="toDayFilter" />
+            <Variable x:TypeArguments="s:DateTime" Name="periodEnd" />
+            <Variable x:TypeArguments="s:DateTime" Name="periodStart" />
+            <Variable x:TypeArguments="s:String[]" Name="fundCodes" />
+            <Variable x:TypeArguments="s:String[]" Name="fundNames" />
+            <Variable x:TypeArguments="x:String" Name="exportFolder" />
+            <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConn" />
+            <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="fromDayCells" />
+            <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="toDayCells" />
+            <Variable x:TypeArguments="x:Int32" Default="0" Name="fundIndex" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:DateTime">
+                <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">botStartTime</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:DateTime">
+                <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">DateTime.Now</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">exportFolder</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">@"D:\TripplePower\ZAM\docs\UnitTrustGSAM\"</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="System.IO.Directory.CreateDirectory(exportFolder);" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="521.6,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+            <ui:InvokeCode.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="exportFolder">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">exportFolder</CSharpValue>
+              </InArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:String[]">
+                <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">fundNames</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:String[]">
+                <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59" xml:space="preserve">new String[]{
+    "Blue Chip Fund",
+    "Bond Umbrella Fund",
+    "Capricorn Fund",
+    "General Equity Fund",
+    "Gross Income Umbrella Fund",
+    "Jupiter Fund",
+    "Morgan &amp; Co Made In Zimbabwe ETF",
+    "Prosperity Fund",
+    "Retail Property Professional Fund",
+    "Retail Property Professional Fund - USD",
+    "Stable Income Fund",
+    "Value Preservation Professional Fund - USD",
+    "Venus Fund",
+    "Zidi Fund"
+}</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:String[]">
+                <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">fundCodes</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:String[]">
+                <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60" xml:space="preserve">new String[]{
+    "BCF","BUF","CPF","GEF","GIF","JEF","MIZ","PF","RPPF","RPPFUS","SIF","ZVPPF","VEF","ZIDI"
+}</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_157">exportCount</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">0</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="521.6,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=habe.co.zw;database=andyb3l_zam_shanduko;user=andyb3l_tatenda;password={x5s9_O@4gMV$A;,8}">
+            <ui:DatabaseConnect.DatabaseConnection>
+              <OutArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">dbConn</CSharpReference>
+              </OutArgument>
+            </ui:DatabaseConnect.DatabaseConnection>
+          </ui:DatabaseConnect>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="521.6,1074.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484.8,964" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(20)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,395.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_19" ScopeGuid="5b4b8dfb-ac17-4c71-8346-e4128415c551" Version="V2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Unit Trust'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5b4b8dfb-ac17-4c71-8346-e4128415c551" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable ContentHash="pg-gIqxhD0alkPdadZOx9g" DesignTimeRectangle="291, 43, 99, 33" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Ribbon' role='tool bar' /&gt;&lt;ctrl name='Ribbon Tabs' role='page tab list' /&gt;&lt;ctrl name='Unit Trust' role='page tab' /&gt;" Guid="00e4fed4-c662-4a84-afda-48abae116969" InformativeScreenshot="ab8643e842509d72bf17ef5dd78258a7.jpg" Reference="dqxWyx86LUGdfjch4DB8jQ/nqY35V1aQUSlsUeiFPYH9w" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='End Of Month Run - GS Asset Manager' /&gt;" SearchSteps="Selector" Version="V6" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.OCREngine>
+                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                      <ActivityFunc.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                      </ActivityFunc.Argument>
+                    </ActivityFunc>
+                  </uix:NApplicationCard.OCREngine>
+                  <uix:NApplicationCard.OpenMode>
+                    <InArgument x:TypeArguments="uix:NAppOpenMode">
+                      <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+                    </InArgument>
+                  </uix:NApplicationCard.OpenMode>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="0, 0, 0, 0" ContentHash="KX2gXZ2ucEebAVfd6achLQ" Reference="dqxWyx86LUGdfjch4DB8jQ/buVSwp9XBE-DS10cl4eYlA" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='End Of Month Run - GS Asset Manager' /&gt;" Version="V3">
+                      <uix:TargetApp.Arguments>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.Arguments>
+                      <uix:TargetApp.FilePath>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.FilePath>
+                      <uix:TargetApp.Url>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.Url>
+                      <uix:TargetApp.WorkingDirectory>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.WorkingDirectory>
+                    </uix:TargetApp>
+                  </uix:NApplicationCard.TargetApp>
+                </uix:NApplicationCard>
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(20)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,395.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_20" ScopeGuid="5b4b8dfb-ac17-4c71-8346-e4128415c551" Version="V2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Information'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5b4b8dfb-ac17-4c71-8346-e4128415c551" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="608, 80, 99, 90" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Collapse the Ribbon' cls='TdxRibbonGroupsDockControlSite' /&gt;&lt;wnd aaname='Clients' cls='TdxRibbonGroupsDockControl' /&gt;&lt;ctrl name='Administration' role='tool bar' /&gt;&lt;ctrl name='Information' role='push button' /&gt;" Guid="2b4cce5e-23c0-4be8-a463-392b8ceb4c73" InformativeScreenshot="0e84ede704a2ea49727529c88db567ad.jpg" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='GS Asset Manager' /&gt;" SearchSteps="Selector" Version="V6" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.OCREngine>
+                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                      <ActivityFunc.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                      </ActivityFunc.Argument>
+                    </ActivityFunc>
+                  </uix:NApplicationCard.OCREngine>
+                  <uix:NApplicationCard.OpenMode>
+                    <InArgument x:TypeArguments="uix:NAppOpenMode">
+                      <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+                    </InArgument>
+                  </uix:NApplicationCard.OpenMode>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="0, 0, 0, 0" ContentHash="KX2gXZ2ucEebAVfd6achLQ" Reference="dqxWyx86LUGdfjch4DB8jQ/buVSwp9XBE-DS10cl4eYlA" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='End Of Month Run - GS Asset Manager' /&gt;" Version="V3">
+                      <uix:TargetApp.Arguments>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.Arguments>
+                      <uix:TargetApp.FilePath>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.FilePath>
+                      <uix:TargetApp.Url>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.Url>
+                      <uix:TargetApp.WorkingDirectory>
+                        <InArgument x:TypeArguments="x:String" />
+                      </uix:TargetApp.WorkingDirectory>
+                    </uix:TargetApp>
+                  </uix:NApplicationCard.TargetApp>
+                </uix:NApplicationCard>
+                <Delay Duration="00:00:20" sap:VirtualizedContainerService.HintSize="451.2,113.6" sap2010:WorkflowViewState.IdRef="Delay_13" />
+              </Sequence>
+            </ui:CommentOut.Body>
+          </ui:CommentOut>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(12)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,447.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" ScopeGuid="09e943e4-6f83-4f08-be8e-bf47aa4838dc" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,296.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClipboardMode="Never" DisplayName="Type Into 'TcxGridSite'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,236.8" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="SameAsCard" ScopeIdentifier="09e943e4-6f83-4f08-be8e-bf47aa4838dc" Version="V5">
+                    <uix:NTypeInto.ClickBeforeMode>
+                      <InArgument x:TypeArguments="uix:NClickMode">
+                        <CSharpValue x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">UiPath.UIAutomationNext.Enums.NClickMode.None</CSharpValue>
+                      </InArgument>
+                    </uix:NTypeInto.ClickBeforeMode>
+                    <uix:NTypeInto.DelayAfter>
+                      <InArgument x:TypeArguments="x:Double">
+                        <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">5.0 + (fundIndex * 3.0)</CSharpValue>
+                      </InArgument>
+                    </uix:NTypeInto.DelayAfter>
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="11, 274, 226, 728" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TcxGridSite' /&gt;" Guid="c9c28d97-f460-4e28-a209-2c9dafca98e3" InformativeScreenshot="5075231cfb6d06ee2fe65ce455644928.jpg" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;&lt;wnd cls='TfrmUTAdmin' title='Unit Trust Fund Administration' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset Position="TopLeft" X="81" Y="85" />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">String.Concat("[k(up)]", 3)</CSharpValue>
+                      </InArgument>
+                    </uix:NTypeInto.Text>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+              </ActivityFunc>
+            </uix:NApplicationCard.OCREngine>
+            <uix:NApplicationCard.OpenMode>
+              <InArgument x:TypeArguments="uix:NAppOpenMode">
+                <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+              </InArgument>
+            </uix:NApplicationCard.OpenMode>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" ContentHash="EpXzjYOWpUafDiyCGlQ-oA" Reference="dqxWyx86LUGdfjch4DB8jQ/VQ6zB-W-v0ygZ93cdTTcag" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" Version="V3">
+                <uix:TargetApp.Arguments>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Arguments>
+                <uix:TargetApp.FilePath>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.FilePath>
+                <uix:TargetApp.Url>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Url>
+                <uix:TargetApp.WorkingDirectory>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.WorkingDirectory>
+              </uix:TargetApp>
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="521.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_7" />
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(12)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,395.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_18" ScopeGuid="09e943e4-6f83-4f08-be8e-bf47aa4838dc" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TcxGridSite'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09e943e4-6f83-4f08-be8e-bf47aa4838dc" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="254, 273, 1676, 730" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TcxPageControl' /&gt;" Guid="54d3dd88-ec7c-4233-aa76-cacc9e934d52" InformativeScreenshot="cf300daf6695ec825bd8378a917eda2c.jpg" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;&lt;wnd cls='TfrmUTAdmin' title='Unit Trust Fund Administration' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset Position="TopLeft" X="91" Y="14" />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+              </ActivityFunc>
+            </uix:NApplicationCard.OCREngine>
+            <uix:NApplicationCard.OpenMode>
+              <InArgument x:TypeArguments="uix:NAppOpenMode">
+                <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+              </InArgument>
+            </uix:NApplicationCard.OpenMode>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" ContentHash="EpXzjYOWpUafDiyCGlQ-oA" Reference="dqxWyx86LUGdfjch4DB8jQ/VQ6zB-W-v0ygZ93cdTTcag" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" Version="V3">
+                <uix:TargetApp.Arguments>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Arguments>
+                <uix:TargetApp.FilePath>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.FilePath>
+                <uix:TargetApp.Url>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Url>
+                <uix:TargetApp.WorkingDirectory>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.WorkingDirectory>
+              </uix:TargetApp>
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(13)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,395.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="a00cefe0-6eb4-496a-bd46-6edd7568ff18" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1872026'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a00cefe0-6eb4-496a-bd46-6edd7568ff18" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="253, 273, 1678, 730" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TcxPageControl' /&gt;" Guid="73e6cd17-d3f2-4d43-aa77-95389bce3e2c" InformativeScreenshot="8e72ea035ed46dba377fa5d9fd8446db.jpg" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;&lt;wnd cls='TfrmUTAdmin' title='Unit Trust Fund Administration' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset Position="TopLeft" X="117" Y="112" />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+              </ActivityFunc>
+            </uix:NApplicationCard.OCREngine>
+            <uix:NApplicationCard.OpenMode>
+              <InArgument x:TypeArguments="uix:NAppOpenMode">
+                <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+              </InArgument>
+            </uix:NApplicationCard.OpenMode>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" ContentHash="ICCUY8A7OkefwZioGhfrjQ" Reference="dqxWyx86LUGdfjch4DB8jQ/iLVwj008ak6BloG1kPH6rA" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" Version="V3">
+                <uix:TargetApp.Arguments>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Arguments>
+                <uix:TargetApp.FilePath>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.FilePath>
+                <uix:TargetApp.Url>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Url>
+                <uix:TargetApp.WorkingDirectory>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.WorkingDirectory>
+              </uix:TargetApp>
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="521.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:DateTime">
+                <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">periodStart</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:DateTime">
+                <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(-1)</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:DateTime">
+                <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">periodEnd</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:DateTime">
+                <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddDays(-1)</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,395.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" ScopeGuid="0b86cc21-1852-4197-8513-c7f50173fc99" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0b86cc21-1852-4197-8513-c7f50173fc99" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable ContentHash="3JkGHfP4HE6ek4IpPE0eeA" DesignTimeRectangle="525, 358, 21, 22" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TfrmUTAdmin' title='Unit Trust Fund Administration' /&gt;&lt;wnd cls='TcxTabSheet' title='Performance' /&gt;&lt;wnd cls='TPanel' /&gt;&lt;ctrl name='Open' role='push button' /&gt;" Guid="fa52a1e9-033a-4f01-ad4b-ee2f17dae55f" InformativeScreenshot="2119c756d092860f70a52778171bb565.jpg" Reference="dqxWyx86LUGdfjch4DB8jQ/jWdPNLXVRkSz70yFR4LYdQ" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset Position="TopLeft" X="8" Y="-18" />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+              </ActivityFunc>
+            </uix:NApplicationCard.OCREngine>
+            <uix:NApplicationCard.OpenMode>
+              <InArgument x:TypeArguments="uix:NAppOpenMode">
+                <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+              </InArgument>
+            </uix:NApplicationCard.OpenMode>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" ContentHash="OejxTKiQ6UCgROQq9yOMHw" Reference="dqxWyx86LUGdfjch4DB8jQ/i5ifzahJdEerwRqo5LDT2g" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" Version="V3">
+                <uix:TargetApp.Arguments>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Arguments>
+                <uix:TargetApp.FilePath>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.FilePath>
+                <uix:TargetApp.Url>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Url>
+                <uix:TargetApp.WorkingDirectory>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.WorkingDirectory>
+              </uix:TargetApp>
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="521.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_8" />
+          <ui:FindChildren DisplayName="Find Children 'client'" Filter="&lt;ctrl role='cell' name='1' /&gt;" sap:VirtualizedContainerService.HintSize="521.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren.Children>
+              <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
+                <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_59">fromDayCells</CSharpReference>
+              </OutArgument>
+            </ui:FindChildren.Children>
+            <ui:FindChildren.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3cc49a41-385c-43fe-89f2-665fcf4a17e8" InformativeScreenshot="09d9740e4122145ebc5e8a8fd86b48b7" Selector="&lt;wnd app='gsam.exe' cls='TcxDateEditPopupWindow' idx='1' /&gt;&lt;ctrl idx='5' role='client' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:FindChildren.Target>
+          </ui:FindChildren>
+          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="521.6,224" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e2fae952-6c2c-42bf-b207-508ed8436019" Version="V5">
+            <uix:NClick.InUiElement>
+              <InArgument x:TypeArguments="ui:UiElement">
+                <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">fromDayCells.First()</CSharpValue>
+              </InArgument>
+            </uix:NClick.InUiElement>
+          </uix:NClick>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(17)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,711.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" ScopeGuid="23c40791-da92-4771-943f-f620a4f6c6c9" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,560.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23c40791-da92-4771-943f-f620a4f6c6c9" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="525, 358, 21, 22" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TfrmUTAdmin' title='Unit Trust Fund Administration' /&gt;&lt;wnd cls='TcxTabSheet' title='Performance' /&gt;&lt;wnd cls='TPanel' /&gt;&lt;ctrl name='Open' role='push button' /&gt;" Guid="ec119c79-0c18-40af-9224-96551d70d205" InformativeScreenshot="428944c0a8444f4fa513dfa1bd499666.jpg" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset Position="TopRight" X="138" Y="-17" />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Back'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23c40791-da92-4771-943f-f620a4f6c6c9" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable ContentHash="WDeESGgtzEWzthiRv_Tnkg" DesignTimeRectangle="4, 43, 21, 21" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Back' role='push button' /&gt;" Guid="6050c73b-a4a1-4e1f-9451-cb1507e626f1" InformativeScreenshot="74987970b66431f63fb552ca4a19ecca.jpg" Reference="dqxWyx86LUGdfjch4DB8jQ/51EZKWws0kyKsAYQ0Odr1A" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TcxDateEditPopupWindow' idx='*' /&gt;" SearchSteps="Selector" Version="V6" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+              </ActivityFunc>
+            </uix:NApplicationCard.OCREngine>
+            <uix:NApplicationCard.OpenMode>
+              <InArgument x:TypeArguments="uix:NAppOpenMode">
+                <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+              </InArgument>
+            </uix:NApplicationCard.OpenMode>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" ContentHash="_EpE_mcdi0W2CDtkz82fmA" Reference="dqxWyx86LUGdfjch4DB8jQ/C0lND-t22EumnZsitEq2hw" Selector="&lt;wnd app='gsam.exe' cls='TcxDateEditPopupWindow' idx='1' /&gt;" Version="V3">
+                <uix:TargetApp.Arguments>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Arguments>
+                <uix:TargetApp.FilePath>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.FilePath>
+                <uix:TargetApp.Url>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Url>
+                <uix:TargetApp.WorkingDirectory>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.WorkingDirectory>
+              </uix:TargetApp>
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+          <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_85">toDayFilter</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">"&lt;ctrl role='cell' name='" + periodEnd.Day.ToString() + "' /&gt;"</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:FindChildren DisplayName="Find Children 'client'" sap:VirtualizedContainerService.HintSize="521.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_3" Scope="FIND_CHILDREN">
+            <ui:FindChildren.Children>
+              <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
+                <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_66">toDayCells</CSharpReference>
+              </OutArgument>
+            </ui:FindChildren.Children>
+            <ui:FindChildren.Filter>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">toDayFilter</CSharpValue>
+              </InArgument>
+            </ui:FindChildren.Filter>
+            <ui:FindChildren.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be0af603-6c1b-475d-85df-50541eaa063d" InformativeScreenshot="2fdb7c94366f87acd7eb920ed898c6d8" Selector="&lt;wnd app='gsam.exe' cls='TcxDateEditPopupWindow' idx='1' /&gt;&lt;ctrl idx='5' role='client' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:FindChildren.Target>
+          </ui:FindChildren>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Unit Trust Fund Administration - GS Asset Manager" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,355.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" IsDisplayNameAuto="True" ScopeGuid="391130e9-73c9-4a85-98a4-813913cba2bb" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,224.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="418.4,164.8" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="391130e9-73c9-4a85-98a4-813913cba2bb" Version="V5">
+                    <uix:NClick.InUiElement>
+                      <InArgument x:TypeArguments="ui:UiElement">
+                        <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">toDayCells.Last()</CSharpValue>
+                      </InArgument>
+                    </uix:NClick.InUiElement>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.InUiElement>
+              <InArgument x:TypeArguments="ui:UiElement">
+                <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">toDayCells.Last()</CSharpValue>
+              </InArgument>
+            </uix:NApplicationCard.InUiElement>
+            <uix:NApplicationCard.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+              </ActivityFunc>
+            </uix:NApplicationCard.OCREngine>
+            <uix:NApplicationCard.OpenMode>
+              <InArgument x:TypeArguments="uix:NAppOpenMode">
+                <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+              </InArgument>
+            </uix:NApplicationCard.OpenMode>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" Version="V3">
+                <uix:TargetApp.Arguments>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Arguments>
+                <uix:TargetApp.FilePath>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.FilePath>
+                <uix:TargetApp.Url>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Url>
+                <uix:TargetApp.WorkingDirectory>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.WorkingDirectory>
+              </uix:TargetApp>
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="521.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_9" />
+          <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_155">fundIndex</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">0</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each fundCode" sap:VirtualizedContainerService.HintSize="521.6,3359.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="x:String">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:String" Name="fundCode" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,3228.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="s:DateTime" Name="fileLastWrite" />
+                    <Variable x:TypeArguments="s:DateTime" Name="exportAttemptTime" />
+                    <Variable x:TypeArguments="x:String" Name="actualSheetName" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(14)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,395.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="734f8aa5-cbf5-4fc8-a7aa-75a587f0195e" Version="V2">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TcxGridSite'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" ScopeIdentifier="734f8aa5-cbf5-4fc8-a7aa-75a587f0195e" Version="V5">
+                            <uix:NClick.MouseButton>
+                              <InArgument x:TypeArguments="uix:NMouseButton">
+                                <CSharpValue x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">UiPath.UIAutomationNext.Enums.NMouseButton.Right</CSharpValue>
+                              </InArgument>
+                            </uix:NClick.MouseButton>
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable ContentHash="mKDvwNWeWEmb89xhiluNfw" DesignTimeRectangle="260, 433, 1664, 564" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TcxTabSheet' title='Performance' /&gt;&lt;wnd cls='TcxTabSheet' title='Fees' /&gt;&lt;wnd cls='TcxGridSite' /&gt;" Guid="ca3cc5d1-b510-48f3-9e73-d0a46b2152b2" InformativeScreenshot="8299a454e115f6d4e6669f36fc09d528.jpg" Reference="dqxWyx86LUGdfjch4DB8jQ/I7zsF3DsDEih6k59py4DXw" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;&lt;wnd cls='TfrmUTAdmin' title='Unit Trust Fund Administration' /&gt;" SearchSteps="Selector" Version="V6" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                      </ActivityFunc>
+                    </uix:NApplicationCard.OCREngine>
+                    <uix:NApplicationCard.OpenMode>
+                      <InArgument x:TypeArguments="uix:NAppOpenMode">
+                        <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+                      </InArgument>
+                    </uix:NApplicationCard.OpenMode>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="0, 0, 0, 0" ContentHash="gTmjWZ6tc0mTOv3FI9-Kcg" Reference="dqxWyx86LUGdfjch4DB8jQ/O3QV1gPyq0G9j_ZvptODYA" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" Version="V3">
+                        <uix:TargetApp.Arguments>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.Arguments>
+                        <uix:TargetApp.FilePath>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.FilePath>
+                        <uix:TargetApp.Url>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.Url>
+                        <uix:TargetApp.WorkingDirectory>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.WorkingDirectory>
+                      </uix:TargetApp>
+                    </uix:NApplicationCard.TargetApp>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NApplicationCard>
+                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="486.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_12" />
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(15)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,395.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="761318db-bb88-4b94-802f-ad3054628efd" Version="V2">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'menu item 394'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="761318db-bb88-4b94-802f-ad3054628efd" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="4, 3, 260, 28" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='441' /&gt;" Guid="38cccb16-35ec-49e6-b57f-14d445b6ef63" InformativeScreenshot="f177458bae55af4401d354442df283a5.jpg" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector" Version="V6" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                      </ActivityFunc>
+                    </uix:NApplicationCard.OCREngine>
+                    <uix:NApplicationCard.OpenMode>
+                      <InArgument x:TypeArguments="uix:NAppOpenMode">
+                        <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+                      </InArgument>
+                    </uix:NApplicationCard.OpenMode>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="0, 0, 0, 0" ContentHash="GjJQzK4y10ulefdI84aTDg" Reference="dqxWyx86LUGdfjch4DB8jQ/gnnAI2AKQEmfmC_bMQztZg" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" Version="V3">
+                        <uix:TargetApp.Arguments>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.Arguments>
+                        <uix:TargetApp.FilePath>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.FilePath>
+                        <uix:TargetApp.Url>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.Url>
+                        <uix:TargetApp.WorkingDirectory>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.WorkingDirectory>
+                      </uix:TargetApp>
+                    </uix:NApplicationCard.TargetApp>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NApplicationCard>
+                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="486.4,56.8" sap2010:WorkflowViewState.IdRef="Delay_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Delay>
+                  <Assign sap:VirtualizedContainerService.HintSize="486.4,56.8" sap2010:WorkflowViewState.IdRef="Assign_11">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s:DateTime">
+                        <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_89">exportAttemptTime</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s:DateTime">
+                        <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">DateTime.Now</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(16)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,560.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="0820703e-84b0-4020-9837-0386d91245a9" Version="V2">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,410.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Edit'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="0820703e-84b0-4020-9837-0386d91245a9" Version="V5">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable ContentHash="eRlfDe6nXEiOGaV7MqIUjA" DesignTimeRectangle="170, 411, 749, 21" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="a6ebaf13-2411-4004-aab6-44a9bb6e3f61" InformativeScreenshot="3fc7c550d4a6498156d2e0052ab6f489.jpg" Reference="dqxWyx86LUGdfjch4DB8jQ/enyeWR9oaUaQe_w3MI9UGQ" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='#32770' title='Export to...' /&gt;" SearchSteps="Selector" Version="V6" />
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">exportFolder + fundCodes[fundIndex] + ".xls"</CSharpValue>
+                              </InArgument>
+                            </uix:NTypeInto.Text>
+                            <uix:NTypeInto.VerifyOptions>
+                              <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              </uix:VerifyExecutionTypeIntoOptions>
+                            </uix:NTypeInto.VerifyOptions>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="Delay_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0820703e-84b0-4020-9837-0386d91245a9" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable ContentHash="MQGrc7PNi0SVOUlHyodzXQ" DesignTimeRectangle="694, 536, 110, 33" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" Guid="80e3c17f-958f-4e37-b0e2-f5ceb24d1c9f" InformativeScreenshot="6a5b245920289e57213dbf28e6dd4546.jpg" Reference="dqxWyx86LUGdfjch4DB8jQ/tNO3qA4ozkquEEVaar1IRw" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='#32770' title='Export to...' /&gt;" SearchSteps="Selector" Version="V6" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                      </ActivityFunc>
+                    </uix:NApplicationCard.OCREngine>
+                    <uix:NApplicationCard.OpenMode>
+                      <InArgument x:TypeArguments="uix:NAppOpenMode">
+                        <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+                      </InArgument>
+                    </uix:NApplicationCard.OpenMode>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="0, 0, 0, 0" ContentHash="HwjolAWo10aTeQ0FZjaIgA" Reference="dqxWyx86LUGdfjch4DB8jQ/ohQb6zKH90iY9kcAeqY0-Q" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" Version="V3">
+                        <uix:TargetApp.Arguments>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.Arguments>
+                        <uix:TargetApp.FilePath>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.FilePath>
+                        <uix:TargetApp.Url>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.Url>
+                        <uix:TargetApp.WorkingDirectory>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.WorkingDirectory>
+                      </uix:TargetApp>
+                    </uix:NApplicationCard.TargetApp>
+                  </uix:NApplicationCard>
+                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="486.4,56.8" sap2010:WorkflowViewState.IdRef="Delay_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Delay>
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="fileLastWrite = System.IO.File.GetLastWriteTime(exportedFilePath);" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="486.4,56.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+                    <ui:InvokeCode.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="exportedFilePath">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">(exportFolder + fundCodes[fundIndex] + ".xls")</CSharpValue>
+                      </InArgument>
+                      <OutArgument x:TypeArguments="s:DateTime" x:Key="fileLastWrite">
+                        <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_90">fileLastWrite</CSharpReference>
+                      </OutArgument>
+                    </ui:InvokeCode.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeCode>
+                  <If sap:VirtualizedContainerService.HintSize="486.4,401.6" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">fileLastWrite &lt; exportAttemptTime</CSharpValue>
+                      </InArgument>
+                    </If.Condition>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <InArgument x:TypeArguments="s:Exception">
+                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">new Exception("Stale export detected: file for code " + fundCodes[fundIndex] + " was not freshly written this run (last modified " + fileLastWrite.ToString() + ")")</CSharpValue>
+                          </InArgument>
+                        </Throw>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <Assign sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">
+                        <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_158">exportCount</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">exportCount + 1</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <If sap:VirtualizedContainerService.HintSize="486.4,892" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">fundIndex &lt; fundCodes.Length - 1</CSharpValue>
+                      </InArgument>
+                    </If.Condition>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,672.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(19)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,612.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="4af41405-83d3-417b-8408-48f97e025afb" Version="V2">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,471.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClipboardMode="Never" DisplayName="Type Into 'TcxGridSite'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="SameAsCard" ScopeIdentifier="4af41405-83d3-417b-8408-48f97e025afb" Version="V5">
+                                  <uix:NTypeInto.ClickBeforeMode>
+                                    <InArgument x:TypeArguments="uix:NClickMode">
+                                      <CSharpValue x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">UiPath.UIAutomationNext.Enums.NClickMode.None</CSharpValue>
+                                    </InArgument>
+                                  </uix:NTypeInto.ClickBeforeMode>
+                                  <uix:NTypeInto.DelayAfter>
+                                    <InArgument x:TypeArguments="x:Double">
+                                      <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">5.0 + (fundIndex * 3.0)</CSharpValue>
+                                    </InArgument>
+                                  </uix:NTypeInto.DelayAfter>
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="11, 274, 226, 728" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TcxGridSite' idx='3' /&gt;" Guid="f2f84186-233c-496e-bb3f-17b2edbc21bd" InformativeScreenshot="18676b02ad81e2b225b218cf1767fbfc.jpg" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;&lt;wnd cls='TfrmUTAdmin' title='Unit Trust Fund Administration' /&gt;" SearchSteps="Selector" Version="V6">
+                                      <uix:TargetAnchorable.PointOffset>
+                                        <uix:PointOffset Position="TopLeft" X="86" Y="17" />
+                                      </uix:TargetAnchorable.PointOffset>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                  <uix:NTypeInto.Text>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">String.Concat(Enumerable.Repeat("[k(down)]", fundIndex + 1))</CSharpValue>
+                                    </InArgument>
+                                  </uix:NTypeInto.Text>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                                <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">
+                                      <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_156">fundIndex</CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">
+                                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">fundIndex + 1</CSharpValue>
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.OCREngine>
+                            <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                              <ActivityFunc.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                              </ActivityFunc.Argument>
+                            </ActivityFunc>
+                          </uix:NApplicationCard.OCREngine>
+                          <uix:NApplicationCard.OpenMode>
+                            <InArgument x:TypeArguments="uix:NAppOpenMode">
+                              <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+                            </InArgument>
+                          </uix:NApplicationCard.OpenMode>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp Area="0, 0, 0, 0" ContentHash="9ZNlP0jVt06m-KoWiqkjLw" Reference="dqxWyx86LUGdfjch4DB8jQ/NR3QJpQsX0SaUzuW6UYJBA" Selector="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" Version="V3">
+                              <uix:TargetApp.Arguments>
+                                <InArgument x:TypeArguments="x:String" />
+                              </uix:TargetApp.Arguments>
+                              <uix:TargetApp.FilePath>
+                                <InArgument x:TypeArguments="x:String" />
+                              </uix:TargetApp.FilePath>
+                              <uix:TargetApp.Url>
+                                <InArgument x:TypeArguments="x:String" />
+                              </uix:TargetApp.Url>
+                              <uix:TargetApp.WorkingDirectory>
+                                <InArgument x:TypeArguments="x:String" />
+                              </uix:TargetApp.WorkingDirectory>
+                            </uix:TargetApp>
+                          </uix:NApplicationCard.TargetApp>
+                        </uix:NApplicationCard>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484.8,89.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+            <ui:ForEach.Values>
+              <InArgument x:TypeArguments="sc:IEnumerable">
+                <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">fundCodes</CSharpValue>
+              </InArgument>
+            </ui:ForEach.Values>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEach>
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="Microsoft.Office.Interop.Excel.Application excelApp = null;&#xA;Microsoft.Office.Interop.Excel.Workbook consolidatedWb = null;&#xA;&#xA;try&#xA;{&#xA;    excelApp = new Microsoft.Office.Interop.Excel.Application();&#xA;    excelApp.Visible = false;&#xA;    excelApp.DisplayAlerts = false;&#xA;&#xA;    consolidatedWb = excelApp.Workbooks.Add();&#xA;&#xA;    System.Collections.Generic.List&lt;double&gt; fundFees = new System.Collections.Generic.List&lt;double&gt;();&#xA;    System.Collections.Generic.List&lt;double&gt; fundVats = new System.Collections.Generic.List&lt;double&gt;();&#xA;    System.Collections.Generic.List&lt;double&gt; fundAudit = new System.Collections.Generic.List&lt;double&gt;();&#xA;    System.Collections.Generic.List&lt;double&gt; fundTrustee = new System.Collections.Generic.List&lt;double&gt;();&#xA;&#xA;    for (int i = 0; i &lt; fundCodes.Length; i++)&#xA;    {&#xA;        string sourcePath = exportFolder + fundCodes[i] + &quot;.xls&quot;;&#xA;        Microsoft.Office.Interop.Excel.Workbook sourceWb = excelApp.Workbooks.Open(sourcePath);&#xA;        Microsoft.Office.Interop.Excel.Worksheet sourceSheet = (Microsoft.Office.Interop.Excel.Worksheet)sourceWb.Sheets[1];&#xA;&#xA;        double mgmtCumulative = 0;&#xA;        double vatCumulative = 0;&#xA;        double auditCumulative = 0;&#xA;        double trusteeCumulative = 0;&#xA;&#xA;        try&#xA;        {&#xA;            object[,] data = (object[,])sourceSheet.UsedRange.Value2;&#xA;            int rowCount = data.GetLength(0);&#xA;            int colCount = data.GetLength(1);&#xA;&#xA;            if (rowCount &gt;= 2 &amp;&amp; colCount &gt;= 5)&#xA;            {&#xA;                bool inMgmt = false;&#xA;                bool inVat = false;&#xA;                bool inAudit = false;&#xA;                bool inTrustee = false;&#xA;&#xA;                for (int r = 1; r &lt;= rowCount; r++)&#xA;                {&#xA;                    try&#xA;                    {&#xA;                        object colBVal = data[r, 2];&#xA;                        string colB = colBVal != null ? colBVal.ToString() : &quot;&quot;;&#xA;                        if (colB.StartsWith(&quot;Fee Type&quot;))&#xA;                        {&#xA;                            inMgmt = colB.Contains(&quot;Management&quot;) &amp;&amp; !colB.Contains(&quot;VAT&quot;);&#xA;                            inVat = colB.Contains(&quot;VAT&quot;) &amp;&amp; colB.Contains(&quot;Management&quot;);&#xA;                            inAudit = colB.Contains(&quot;Audit&quot;);&#xA;                            inTrustee = colB.Contains(&quot;Trustee&quot;);&#xA;                            continue;&#xA;                        }&#xA;                        object colEVal = data[r, 5];&#xA;                        if (colEVal != null)&#xA;                        {&#xA;                            double cum;&#xA;                            if (double.TryParse(colEVal.ToString(), out cum))&#xA;                            {&#xA;                                if (inMgmt) mgmtCumulative = cum;&#xA;                                if (inVat) vatCumulative = cum;&#xA;                                if (inAudit) auditCumulative = cum;&#xA;                                if (inTrustee) trusteeCumulative = cum;&#xA;                            }&#xA;                        }&#xA;                    }&#xA;                    catch (Exception rowEx)&#xA;                    {&#xA;                        throw new Exception(&quot;Failed at fund '&quot; + fundCodes[i] + &quot;', row &quot; + r + &quot; of &quot; + rowCount + &quot; (sheet is &quot; + rowCount + &quot; rows x &quot; + colCount + &quot; cols): &quot; + rowEx.Message);&#xA;                    }&#xA;                }&#xA;            }&#xA;        }&#xA;        catch (Exception fundEx)&#xA;        {&#xA;            sourceWb.Close(false);&#xA;            System.Runtime.InteropServices.Marshal.ReleaseComObject(sourceSheet);&#xA;            System.Runtime.InteropServices.Marshal.ReleaseComObject(sourceWb);&#xA;            throw new Exception(&quot;Block-scan failed for fund '&quot; + fundCodes[i] + &quot;' (file: &quot; + sourcePath + &quot;): &quot; + fundEx.Message);&#xA;        }&#xA;&#xA;        fundFees.Add(mgmtCumulative);&#xA;        fundVats.Add(vatCumulative);&#xA;        fundAudit.Add(auditCumulative);&#xA;        fundTrustee.Add(trusteeCumulative);&#xA;&#xA;        sourceSheet.Copy(Type.Missing, consolidatedWb.Sheets[consolidatedWb.Sheets.Count]);&#xA;        Microsoft.Office.Interop.Excel.Worksheet copiedSheet = (Microsoft.Office.Interop.Excel.Worksheet)consolidatedWb.Sheets[consolidatedWb.Sheets.Count];&#xA;        copiedSheet.Name = fundCodes[i];&#xA;&#xA;        sourceWb.Close(false);&#xA;        System.Runtime.InteropServices.Marshal.ReleaseComObject(sourceSheet);&#xA;        System.Runtime.InteropServices.Marshal.ReleaseComObject(sourceWb);&#xA;    }&#xA;&#xA;    Microsoft.Office.Interop.Excel.Worksheet summarySheet = (Microsoft.Office.Interop.Excel.Worksheet)consolidatedWb.Sheets.Add(Type.Missing, consolidatedWb.Sheets[consolidatedWb.Sheets.Count]);&#xA;    summarySheet.Name = &quot;Summary&quot;;&#xA;    summarySheet.Cells[1, 1] = &quot;SUMMARY MANAGEMENT FEES&quot;;&#xA;    summarySheet.Cells[1, 2] = &quot;FEES&quot;;&#xA;    summarySheet.Cells[1, 3] = &quot;VAT&quot;;&#xA;    summarySheet.Cells[1, 4] = &quot;TOTAL FEES&quot;;&#xA;    summarySheet.Cells[1, 5] = &quot;AUDIT FEES&quot;;&#xA;    summarySheet.Cells[1, 6] = &quot;TRUSTEE FEES&quot;;&#xA;&#xA;    for (int i = 0; i &lt; fundNames.Length; i++)&#xA;    {&#xA;        summarySheet.Cells[i + 2, 1] = fundNames[i];&#xA;        summarySheet.Cells[i + 2, 2] = fundFees[i];&#xA;        summarySheet.Cells[i + 2, 3] = fundVats[i];&#xA;        summarySheet.Cells[i + 2, 4] = fundFees[i] + fundVats[i];&#xA;        summarySheet.Cells[i + 2, 5] = fundAudit[i];&#xA;        summarySheet.Cells[i + 2, 6] = fundTrustee[i];&#xA;    }&#xA;    summarySheet.Move(consolidatedWb.Sheets[1]);&#xA;&#xA;    foreach (Microsoft.Office.Interop.Excel.Worksheet sheet in consolidatedWb.Sheets)&#xA;    {&#xA;        if (sheet.Name == &quot;Sheet1&quot;)&#xA;        {&#xA;            sheet.Delete();&#xA;            System.Runtime.InteropServices.Marshal.ReleaseComObject(sheet);&#xA;            break;&#xA;        }&#xA;    }&#xA;&#xA;    consolidatedFileName = &quot;Unit Trusts Fees - &quot; + periodStart.ToString(&quot;MMMM yyyy&quot;) + &quot;.xlsx&quot;;&#xA;    consolidatedWb.SaveAs(exportFolder + consolidatedFileName, Microsoft.Office.Interop.Excel.XlFileFormat.xlOpenXMLWorkbook);&#xA;}&#xA;finally&#xA;{&#xA;    if (consolidatedWb != null)&#xA;    {&#xA;        consolidatedWb.Close(false);&#xA;        System.Runtime.InteropServices.Marshal.ReleaseComObject(consolidatedWb);&#xA;    }&#xA;    if (excelApp != null)&#xA;    {&#xA;        excelApp.Quit();&#xA;        System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);&#xA;    }&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="521.6,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_5" Language="CSharp">
+            <ui:InvokeCode.Arguments>
+              <InArgument x:TypeArguments="s:String[]" x:Key="fundCodes">
+                <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">fundCodes</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="fundNames">
+                <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">fundNames</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="exportFolder">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">exportFolder</CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="s:DateTime" x:Key="periodStart">
+                <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">periodStart</CSharpValue>
+              </InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="consolidatedFileName">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_110">consolidatedFileName</CSharpReference>
+              </OutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="521.6,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2">
+            <ui:ExecuteNonQuery.ExistingDbConnection>
+              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">dbConn</CSharpValue>
+              </InArgument>
+            </ui:ExecuteNonQuery.ExistingDbConnection>
+            <ui:ExecuteNonQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteNonQuery.Parameters>
+            <ui:ExecuteNonQuery.Sql>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">"INSERT INTO BotRunLog (WorkflowName, RunDate, Status, RecordsProcessed, ErrorMessage, Duration) VALUES ('UnitTrustGSAMExport', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'Success', " + exportCount.ToString() + ", NULL, " + Convert.ToInt32((DateTime.Now - botStartTime).TotalSeconds).ToString() + ")"</CSharpValue>
+              </InArgument>
+            </ui:ExecuteNonQuery.Sql>
+          </ui:ExecuteNonQuery>
+          <ui:DatabaseDisconnect DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="521.6,48" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1">
+            <ui:DatabaseDisconnect.DatabaseConnection>
+              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">dbConn</CSharpValue>
+              </InArgument>
+            </ui:DatabaseDisconnect.DatabaseConnection>
+          </ui:DatabaseDisconnect>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Catch" sap:VirtualizedContainerService.HintSize="555.2,198.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=habe.co.zw;database=andyb3l_zam_shanduko;user=andyb3l_tatenda;password={x5s9_O@4gMV$A;,8}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="521.6,138.4" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_3" ProviderName="System.Data.Odbc">
+                <ui:ExecuteNonQuery.Parameters>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:ExecuteNonQuery.Parameters>
+                <ui:ExecuteNonQuery.Sql>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">"INSERT INTO BotRunLog (WorkflowName, RunDate, Status, RecordsProcessed, ErrorMessage, Duration) VALUES ('UnitTrustGSAMExport', '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'Failed', " + exportCount.ToString() + ", '" + exception.Message.Replace("'", "''") + "', " + Convert.ToInt32((DateTime.Now - botStartTime).TotalSeconds).ToString() + ")"</CSharpValue>
+                  </InArgument>
+                </ui:ExecuteNonQuery.Sql>
+              </ui:ExecuteNonQuery>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="555.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>

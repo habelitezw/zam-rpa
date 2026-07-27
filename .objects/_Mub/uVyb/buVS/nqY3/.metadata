@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Unit Trust",
+  "Type": "Element",
+  "Id": "nqY35V1aQUSlsUeiFPYH9w",
+  "Reference": "dqxWyx86LUGdfjch4DB8jQ/nqY35V1aQUSlsUeiFPYH9w",
+  "ParentRef": "dqxWyx86LUGdfjch4DB8jQ/buVSwp9XBE-DS10cl4eYlA",
+  "Created": "2026-07-24T02:52:43.1129001Z",
+  "Updated": "2026-07-24T02:52:43.1129001Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.4.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

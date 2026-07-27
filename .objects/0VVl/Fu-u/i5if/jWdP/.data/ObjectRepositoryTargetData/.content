@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3JkGHfP4HE6ek4IpPE0eeA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="525, 358, 21, 22" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TfrmUTAdmin' title='Unit Trust Fund Administration' /&gt;&lt;wnd cls='TcxTabSheet' title='Performance' /&gt;&lt;wnd cls='TPanel' /&gt;&lt;ctrl name='Open' role='push button' /&gt;" Guid="fa52a1e9-033a-4f01-ad4b-ee2f17dae55f" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;" SearchSteps="Selector" Version="V6">
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="TopLeft" X="8" Y="-18" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="2119c756d092860f70a52778171bb565.jpg" xmlns="">0S5CZr5XLWUu429Vl5yvQ4g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
