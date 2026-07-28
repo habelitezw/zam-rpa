@@ -98,15 +98,18 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="StanbicBankIntegration" sap:VirtualizedContainerService.HintSize="893.2,8943.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="StanbicBankIntegration" sap:VirtualizedContainerService.HintSize="893.2,8904.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConn6" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556.8,8920" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556.8,8881.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="555.2,8472.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="555.2,8416" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="alreadyImportedUSD" />
             <Variable x:TypeArguments="x:Boolean" Name="alreadyImportedCard" />
@@ -119,7 +122,6 @@
             <Variable x:TypeArguments="x:String" Name="fileUSD" />
             <Variable x:TypeArguments="x:String" Name="fileCard" />
             <Variable x:TypeArguments="x:String" Name="fileMain" />
-            <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConn6" />
             <Variable x:TypeArguments="x:Double" Name="txnAmount" />
             <Variable x:TypeArguments="x:String" Name="txnType" />
             <Variable x:TypeArguments="sd:DataTable" Name="dtCheckMain" />
@@ -805,7 +807,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="521.6,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_4">
+          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="521.6,138.4" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_4">
             <ui:ExecuteNonQuery.ExistingDbConnection>
               <InArgument x:TypeArguments="ui:DatabaseConnection">
                 <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">dbConn6</CSharpValue>
@@ -820,13 +822,6 @@
               </InArgument>
             </ui:ExecuteNonQuery.Sql>
           </ui:ExecuteNonQuery>
-          <ui:DatabaseDisconnect DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="521.6,48" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1">
-            <ui:DatabaseDisconnect.DatabaseConnection>
-              <InArgument x:TypeArguments="ui:DatabaseConnection">
-                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">dbConn6</CSharpValue>
-              </InArgument>
-            </ui:DatabaseDisconnect.DatabaseConnection>
-          </ui:DatabaseDisconnect>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -853,12 +848,19 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="555.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="555.2,108" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:DatabaseDisconnect DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="521.6,48" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1">
+            <ui:DatabaseDisconnect.DatabaseConnection>
+              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">dbConn6</CSharpValue>
+              </InArgument>
+            </ui:DatabaseDisconnect.DatabaseConnection>
+          </ui:DatabaseDisconnect>
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
