@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Sage 300 - ZAM USD",
+  "Type": "Screen",
+  "Id": "zfyg1Qrr90S_n3XrGFrmoA",
+  "Reference": "Apz5EvZJakit9T1_FI4XEA/zfyg1Qrr90S_n3XrGFrmoA",
+  "ParentRef": "Apz5EvZJakit9T1_FI4XEA/mscjdNHAd0ONH1_dZf0iIA",
+  "Created": "2026-10-02T00:29:52.8763203Z",
+  "Updated": "2026-10-02T00:29:52.8763203Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

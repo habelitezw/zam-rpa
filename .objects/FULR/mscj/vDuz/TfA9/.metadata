@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Batch Number",
+  "Type": "Element",
+  "Id": "TfA9LTr0r0-rqGyw4cJr-A",
+  "Reference": "Apz5EvZJakit9T1_FI4XEA/TfA9LTr0r0-rqGyw4cJr-A",
+  "ParentRef": "Apz5EvZJakit9T1_FI4XEA/vDuzrfUW_0uBQUytjndRKw",
+  "Created": "2026-10-01T23:28:01.0225095Z",
+  "Updated": "2026-10-01T23:28:01.0225095Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

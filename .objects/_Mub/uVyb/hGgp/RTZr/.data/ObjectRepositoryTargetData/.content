@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="HJZSDB7ZaUyVIFKarYgFnA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1211, 80, 55, 90" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Collapse the Ribbon' cls='TdxRibbonGroupsDockControlSite' /&gt;&lt;wnd aaname='Client and Counterparty' cls='TdxRibbonGroupsDockControl' /&gt;&lt;ctrl name='Money Market' role='tool bar' /&gt;&lt;ctrl name='Tools' role='menu item' /&gt;" Guid="2e3a01a7-581a-48ec-9040-9adab4eaa44d" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='GS Asset Manager' /&gt;" SearchSteps="Selector" Version="V6">
-      <imageRef attrName="InformativeScreenshot" originalValue="5a4d7e5d32fc8f8f54ebe1893b1b2879.jpg" xmlns="">0jIDsXuC-UEqB3A-BFh6orw</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">Click</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

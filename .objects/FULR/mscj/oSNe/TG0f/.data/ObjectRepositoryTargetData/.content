@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="_WLsUFUVEkuqiYIE9U5b3A" Reference="Apz5EvZJakit9T1_FI4XEA/TG0fiuQXsU-lt1Hx6iyoAg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="241, 671, 89, 29" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' /&gt;" Guid="82c25e12-ece4-4ffa-b96a-375c7d0bc86c" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.10.59 - Remote Desktop Connection' /&gt;&lt;wnd app='a4wcontainerxp.exe' cls='ATL:5CFDA238' title='USZWMD - G/L Journal Entry' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="00341f12b5b0b8f2bd943d4c15c3ab82.jpg" xmlns="">0vNIYHLegCUKXgg-9XtliJw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

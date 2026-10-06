@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="XmVvr3v36EGMd5h9sGPxeg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="120, 423, 86, 26" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='5' title='&amp;amp;New...' /&gt;" Guid="0128aada-e7c5-419d-8992-8819ddd2f908" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.10.59 - Remote Desktop Connection' /&gt;&lt;wnd app='a4wcontainerxp.exe' cls='ATL*A238' title='USZWMD - G/L Batch List' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9468dbd03cd15ebca85bfb055165b104.jpg" xmlns="">0xgpxBDs31EWngIEY14NF9Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

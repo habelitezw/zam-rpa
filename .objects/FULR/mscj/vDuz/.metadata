@@ -1,0 +1,13 @@
+﻿{
+  "Name": "USZWMD - GL Batch List",
+  "Type": "Screen",
+  "Id": "vDuzrfUW_0uBQUytjndRKw",
+  "Reference": "Apz5EvZJakit9T1_FI4XEA/vDuzrfUW_0uBQUytjndRKw",
+  "ParentRef": "Apz5EvZJakit9T1_FI4XEA/mscjdNHAd0ONH1_dZf0iIA",
+  "Created": "2026-10-01T21:48:11.0788229Z",
+  "Updated": "2026-10-01T21:48:11.0788229Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

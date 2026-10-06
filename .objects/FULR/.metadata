@@ -1,0 +1,12 @@
+﻿{
+  "Name": "USZWMD - GL Journal Entry",
+  "Type": "App",
+  "Id": "FULR74VeqEmtyA1b7baOSA",
+  "Reference": "Apz5EvZJakit9T1_FI4XEA/FULR74VeqEmtyA1b7baOSA",
+  "Created": "2026-10-01T18:34:35.5932632Z",
+  "Updated": "2026-10-01T18:34:35.5932632Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

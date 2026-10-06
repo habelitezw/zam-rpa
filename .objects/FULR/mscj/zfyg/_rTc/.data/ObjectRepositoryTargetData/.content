@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1sPAt3gdTkKupmEaCoeBww" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="304, 252, 86, 79" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='SysListView32' /&gt;&lt;ctrl name='G/L Transactions' role='list item' /&gt;" Guid="1b39bb9f-ebde-4766-8719-2005908fb73f" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.10.59 - Remote Desktop Connection' /&gt;&lt;wnd app='accpac.exe' cls='Afx:*' title='Sage 300 - ZAM USD' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="566ad629674d5284c4ccc5cd41710e5a.jpg" xmlns="">0S8WOsKaV00-0lH8MGrwWCA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

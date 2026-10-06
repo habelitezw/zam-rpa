@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="mKDvwNWeWEmb89xhiluNfw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="260, 433, 1664, 564" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='TcxTabSheet' title='Performance' /&gt;&lt;wnd cls='TcxTabSheet' title='Fees' /&gt;&lt;wnd cls='TcxGridSite' /&gt;" Guid="ca3cc5d1-b510-48f3-9e73-d0a46b2152b2" ScopeSelectorArgument="&lt;wnd app='gsam.exe' cls='TfrmMain' title='Unit Trust Fund Administration - GS Asset Manager' /&gt;&lt;wnd cls='TfrmUTAdmin' title='Unit Trust Fund Administration' /&gt;" SearchSteps="Selector" Version="V6">
-      <imageRef attrName="InformativeScreenshot" originalValue="8299a454e115f6d4e6669f36fc09d528.jpg" xmlns="">0c8ODhjmzEUqFmwRb_Cgscg</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">Click</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

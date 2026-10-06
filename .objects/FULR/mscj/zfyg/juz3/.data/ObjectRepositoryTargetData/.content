@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZF6-4ZBrHkuLRNmr0mXDSQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="218, 252, 86, 59" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='SysListView32' /&gt;&lt;ctrl name='Batch List' role='list item' /&gt;" Guid="f5f4c94e-d9ef-4610-b179-5b4829064c86" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.10.59 - Remote Desktop Connection' /&gt;&lt;wnd app='accpac.exe' cls='Afx:*' title='Sage 300 - ZAM USD' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="e58feda9dd8ac5ddd0412185f98e0b99.jpg" xmlns="">0RXzP5NcEM0GFb9UkAIrblA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

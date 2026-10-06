@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VKkNkc53cE2XXi7P1WCy1g" Reference="Apz5EvZJakit9T1_FI4XEA/Rkfcxe1zT0unf8lHMjRQlA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1014, 671, 89, 29" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='13' title='&amp;amp;Close' /&gt;" Guid="235d0d1d-7c10-4549-8bff-7534981ed978" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.10.59 - Remote Desktop Connection' /&gt;&lt;wnd app='a4wcontainerxp.exe' cls='ATL*A238' title='USZWMD - G/L Journal Entry' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7846415df4bfb04af44087fdc6ed5670.jpg" xmlns="">0ceF2gb-nfEecMSIji4xJvw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

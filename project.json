@@ -4,11 +4,12 @@
   "description": "RPA automation for Zimnat Asset Management financial workflows",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Database.Activities": "[2.1.0-preview]",
-    "UiPath.Excel.Activities": "[3.5.2]",
-    "UiPath.Mail.Activities": "[2.10.11]",
-    "UiPath.System.Activities": "[26.4.1-preview]",
-    "UiPath.UIAutomation.Activities": "[26.4.4-preview]"
+    "UiPath.Database.Activities": "[2.1.1]",
+    "UiPath.Excel.Activities": "[3.6.1]",
+    "UiPath.Mail.Activities": "[2.11.10]",
+    "UiPath.MicrosoftOffice365.Activities": "[3.11.10]",
+    "UiPath.System.Activities": "[26.6.3]",
+    "UiPath.UIAutomation.Activities": "[26.10.4]"
   },
   "webServices": [],
   "entitiesStores": [],

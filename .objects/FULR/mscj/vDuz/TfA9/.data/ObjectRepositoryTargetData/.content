@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DSbSioe15Eq1Ng7pCP-Kyw" Reference="Apz5EvZJakit9T1_FI4XEA/TfA9LTr0r0-rqGyw4cJr-A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="24, 119, 125, 30" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='ATL:SysListView32' /&gt;" Guid="bf9a1455-59c6-48a9-96c8-da3932755b9c" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.10.59 - Remote Desktop Connection' /&gt;&lt;wnd app='a4wcontainerxp.exe' cls='ATL*' title='USZWMD - G/L Batch List' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="429bcf95ac2263de3e5ac8fa3068e6b0.jpg" xmlns="">0mO3JIG0HuUmSCGfq9dfsnA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">KeyboardShortcut</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

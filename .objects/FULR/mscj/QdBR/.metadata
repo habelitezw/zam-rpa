@@ -1,0 +1,13 @@
+﻿{
+  "Name": "USZWMD - GL Journal Entry(1)",
+  "Type": "Screen",
+  "Id": "QdBR_awQpkyo_MB_qmkk-A",
+  "Reference": "Apz5EvZJakit9T1_FI4XEA/QdBR_awQpkyo_MB_qmkk-A",
+  "ParentRef": "Apz5EvZJakit9T1_FI4XEA/mscjdNHAd0ONH1_dZf0iIA",
+  "Created": "2026-10-02T00:46:00.4613478Z",
+  "Updated": "2026-10-02T00:46:00.4613478Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

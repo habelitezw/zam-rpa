@@ -1,0 +1,13 @@
+﻿{
+  "Name": "General Ledger",
+  "Type": "Element",
+  "Id": "rQxjg3cDmUiHJsTmC68Pag",
+  "Reference": "Apz5EvZJakit9T1_FI4XEA/rQxjg3cDmUiHJsTmC68Pag",
+  "ParentRef": "Apz5EvZJakit9T1_FI4XEA/zfyg1Qrr90S_n3XrGFrmoA",
+  "Created": "2026-10-02T00:33:28.6679736Z",
+  "Updated": "2026-10-02T00:33:28.6679736Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,9 +1,9 @@
 ﻿{
   "Type": "Library",
-  "Id": "dqxWyx86LUGdfjch4DB8jQ",
-  "Created": "2026-06-24T02:44:35.9908202Z",
-  "Updated": "2026-06-24T02:44:35.9908202Z",
+  "Id": "Apz5EvZJakit9T1_FI4XEA",
+  "Created": "2026-08-21T13:30:09.7232239Z",
+  "Updated": "2026-08-21T13:30:09.7232239Z",
   "CreatedBy": [
-    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
   ]
 }
