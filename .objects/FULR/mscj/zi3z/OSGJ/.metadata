@@ -1,0 +1,13 @@
+﻿{
+  "Name": "GL Transactions",
+  "Type": "Element",
+  "Id": "OSGJdDSNpEytoNx5hXESvw",
+  "Reference": "Apz5EvZJakit9T1_FI4XEA/OSGJdDSNpEytoNx5hXESvw",
+  "ParentRef": "Apz5EvZJakit9T1_FI4XEA/zi3zhZ3PDEKAsHPFin-_QA",
+  "Created": "2026-10-06T11:21:28.0502953Z",
+  "Updated": "2026-10-06T11:21:28.0502953Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

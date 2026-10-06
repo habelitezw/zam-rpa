@@ -1,0 +1,14 @@
+﻿{
+  "Name": "CZAM_RPAACCPAC_Impor…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "6sYSLK3qb0qyrUQex7PVHQ",
+  "Reference": "Apz5EvZJakit9T1_FI4XEA/6sYSLK3qb0qyrUQex7PVHQ",
+  "ParentRef": "Apz5EvZJakit9T1_FI4XEA/lxxbBlZEt0SHVq-hwoclLg",
+  "Created": "2026-10-06T12:38:43.1282695Z",
+  "Updated": "2026-10-06T12:38:43.1282695Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -112,7 +112,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ACCPACJournalEntry" sap:VirtualizedContainerService.HintSize="897.2,4296.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ACCPACJournalEntry" sap:VirtualizedContainerService.HintSize="897.2,4472.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sageBatchNumber" />
       <Variable x:TypeArguments="s:DateTime" Name="botStartTime" />
@@ -122,12 +122,12 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486.4,4273.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486.4,4449.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConnACCPAC" />
       </TryCatch.Variables>
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="484.8,3835.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="484.8,4011.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="namedRangeError" />
             <Variable x:TypeArguments="x:Int32" Name="batchCount" />
@@ -168,7 +168,7 @@
               </OutArgument>
             </ui:DatabaseConnect.DatabaseConnection>
           </ui:DatabaseConnect>
-          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Query" sap:VirtualizedContainerService.HintSize="451.2,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT j.JournalID, j.Date, j.Description, j.SourceWorkflow, j.ACCPACBatchNumber FROM journalheader j WHERE j.PostedToACCPAC = FALSE ORDER BY j.JournalID">
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Query" sap:VirtualizedContainerService.HintSize="451.2,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT j.JournalID, j.Date, j.Description, j.SourceWorkflow, j.ACCPACBatchNumber FROM journalheader j WHERE j.PostedToACCPAC = FALSE AND NOT EXISTS (SELECT 1 FROM journalline l LEFT JOIN glaccounts a ON l.AccountID = a.AccountID WHERE l.JournalID = j.JournalID AND (a.AccountID IS NULL OR a.ACCPACCode IS NULL OR TRIM(a.ACCPACCode) = '')) ORDER BY j.JournalID">
             <ui:ExecuteQuery.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
                 <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dtHeaders</CSharpReference>
@@ -358,6 +358,11 @@
               </OutArgument>
             </ui:InvokeCode.Arguments>
           </ui:InvokeCode>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="ImportToSage - Invoke Workflow File (ImportToSage.xaml)" sap:VirtualizedContainerService.HintSize="451.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ImportToSage.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
           <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="451.2,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.Odbc" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};server=habe.co.zw;database=andyb3l_zam_shanduko;user=andyb3l_tatenda;password={x5s9_O@4gMV$A;,8}">
             <ui:DatabaseConnect.DatabaseConnection>
               <OutArgument x:TypeArguments="ui:DatabaseConnection">

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Import",
+  "Type": "App",
+  "Id": "KUuYC7lSvUmA_ncNGmTvxw",
+  "Reference": "Apz5EvZJakit9T1_FI4XEA/KUuYC7lSvUmA_ncNGmTvxw",
+  "Created": "2026-10-06T12:38:06.8940912Z",
+  "Updated": "2026-10-06T12:38:06.8940912Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
